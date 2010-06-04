@@ -681,6 +681,7 @@
 			968B0B7F11B88F9900B8F04F /* PBXTextBookmark */ = 968B0B7F11B88F9900B8F04F /* PBXTextBookmark */;
 			968B0B8011B88F9900B8F04F /* PBXTextBookmark */ = 968B0B8011B88F9900B8F04F /* PBXTextBookmark */;
 			968B0B8511B8940000B8F04F /* PBXTextBookmark */ = 968B0B8511B8940000B8F04F /* PBXTextBookmark */;
+			968B0B8811B8941F00B8F04F /* PBXTextBookmark */ = 968B0B8811B8941F00B8F04F /* PBXTextBookmark */;
 		};
 		sourceControlManager = 968B03C511B6DBEF00B8F04F /* Source Control */;
 		userBuildSettings = {
@@ -1223,8 +1224,8 @@
 	968B046F11B6E4A400B8F04F /* event_utils.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1650, 947}}";
-			sepNavSelRange = "{479, 0}";
-			sepNavVisRange = "{0, 925}";
+			sepNavSelRange = "{479, 4}";
+			sepNavVisRange = "{0, 929}";
 		};
 	};
 	968B047911B6EAB400B8F04F /* XCBuildMessageTextBookmark */ = {
@@ -4908,7 +4909,7 @@
 		fRef = 968B046F11B6E4A400B8F04F /* event_utils.cpp */;
 		name = "event_utils.cpp: 17";
 		rLen = 0;
-		rLoc = 925;
+		rLoc = 929;
 		rType = 0;
 		vrLen = 352;
 		vrLoc = 0;
@@ -5354,7 +5355,7 @@
 		fRef = 968B046F11B6E4A400B8F04F /* event_utils.cpp */;
 		name = "event_utils.cpp: 17";
 		rLen = 0;
-		rLoc = 925;
+		rLoc = 929;
 		rType = 0;
 		vrLen = 352;
 		vrLoc = 0;
@@ -6090,7 +6091,7 @@
 		fRef = 968B046F11B6E4A400B8F04F /* event_utils.cpp */;
 		name = "event_utils.cpp: 20";
 		rLen = 15;
-		rLoc = 518;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 0;
@@ -6590,7 +6591,7 @@
 		fRef = 968B046F11B6E4A400B8F04F /* event_utils.cpp */;
 		name = "event_utils.cpp: 20";
 		rLen = 15;
-		rLoc = 518;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 0;
@@ -6760,7 +6761,7 @@
 		fRef = 968B046F11B6E4A400B8F04F /* event_utils.cpp */;
 		name = "event_utils.cpp: 20";
 		rLen = 15;
-		rLoc = 518;
+		rLoc = 522;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 0;
@@ -6960,7 +6961,7 @@
 		fRef = 968B046F11B6E4A400B8F04F /* event_utils.cpp */;
 		name = "event_utils.cpp: 16";
 		rLen = 0;
-		rLoc = 479;
+		rLoc = 483;
 		rType = 0;
 		vrLen = 928;
 		vrLoc = 0;
@@ -6970,9 +6971,19 @@
 		fRef = 968B046F11B6E4A400B8F04F /* event_utils.cpp */;
 		name = "event_utils.cpp: 16";
 		rLen = 0;
-		rLoc = 479;
+		rLoc = 483;
 		rType = 0;
 		vrLen = 925;
+		vrLoc = 0;
+	};
+	968B0B8811B8941F00B8F04F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B046F11B6E4A400B8F04F /* event_utils.cpp */;
+		name = "event_utils.cpp: 16";
+		rLen = 4;
+		rLoc = 479;
+		rType = 0;
+		vrLen = 929;
 		vrLoc = 0;
 	};
 }
