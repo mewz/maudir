@@ -17,6 +17,7 @@
 #include <iostream>
 #include "string_utils.h"
 #include "base62.h"
+#include "mau_config.h"
 
 class DataStore{
 

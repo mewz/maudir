@@ -8,12 +8,6 @@
 
 #include "data_store.h"
 
-#define DB "urls"
-#define DBSERVER "localhost"
-#define DBUSER "root"
-#define DBPASSWORD "pass1234"
-#define DBPORT 3306
-
 using namespace mysqlpp;
 
 static memcached_st *tcp_client = NULL;

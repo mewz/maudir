@@ -13,3 +13,11 @@
 #define MAU_SERVER_URL "http://127.0.0.1:1025/"
 #endif
 
+#ifndef DB_SERVER_INFO
+#define DB_SERVER_INFO
+#define DB "urls"
+#define DBSERVER "localhost"
+#define DBUSER "someuser"
+#define DBPASSWORD "somepass"
+#define DBPORT 3006
+#endif
