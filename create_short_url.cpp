@@ -34,7 +34,7 @@ string CreateShortURL::parse_url(std::string urlin, bool *err){
 
 string CreateShortURL::parse_path(string pathin){
 	string path = "";
-	//remove all leading '/' - only 1 is every needed
+	//remove all leading '/' - only 1 is needed
 	bool insertPath = false;
 	for(size_t i = 0; i < pathin.length(); i ++){
 		if(!insertPath){
@@ -57,7 +57,7 @@ bool CreateShortURL::is_valid_host(string host){
 		return false;
 	}
 	//cheap way of parsing for a domain -
-	//we do not support IP addresses, so make sure the URL contains at least one alpha
+	//we do not support IP addresses, so make sure the host contains at least one alpha
 	for(size_t i = 0; i < host.length(); i ++){
 		char c = host.at(i);
 		if(c > 57){
