@@ -45,6 +45,7 @@
 		968B057911B7000A00B8F04F /* data_store.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = data_store.cpp; sourceTree = "<group>"; };
 		968B09B211B85CF400B8F04F /* redirect_url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = redirect_url.h; sourceTree = "<group>"; };
 		968B09B311B85CF400B8F04F /* redirect_url.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = redirect_url.cpp; sourceTree = "<group>"; };
+		968B0B8A11B8948800B8F04F /* mau_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mau_config.h; sourceTree = "<group>"; };
 		C6859E8B029090EE04C91782 /* maudir.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = maudir.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +86,7 @@
 				968B057911B7000A00B8F04F /* data_store.cpp */,
 				968B09B211B85CF400B8F04F /* redirect_url.h */,
 				968B09B311B85CF400B8F04F /* redirect_url.cpp */,
+				968B0B8A11B8948800B8F04F /* mau_config.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";

@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>968B0BA811B8963700B8F04F</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>mau_config.h</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>968B0BA911B8963700B8F04F</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>mau_config.h</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>968B0BAF11B8965000B8F04F</string>
+						<key>history</key>
+						<array>
+							<string>968B0BAA11B8963700B8F04F</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {1902, 983}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>3855 176 1902 1024 3840 120 1920 1080 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -273,7 +314,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
+									<integer>13</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -316,7 +357,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>event_utils.cpp</string>
+								<string>redirect_url.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -324,28 +365,29 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>event_utils.cpp</string>
+										<string>redirect_url.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>968B0B8811B8941F00B8F04F</string>
+										<string>968B0BAE11B8965000B8F04F</string>
 										<key>history</key>
 										<array>
 											<string>968B0A2111B85FCE00B8F04F</string>
 											<string>968B0A2211B85FCE00B8F04F</string>
 											<string>968B0B6111B8890C00B8F04F</string>
-											<string>968B0B6411B8890C00B8F04F</string>
 											<string>968B0B6611B8890C00B8F04F</string>
 											<string>968B0B6811B8890C00B8F04F</string>
-											<string>968B0B6A11B8890C00B8F04F</string>
 											<string>968B0B7511B88D4100B8F04F</string>
 											<string>968B0B7611B88D4100B8F04F</string>
-											<string>968B0B7811B88E1600B8F04F</string>
-											<string>968B0B7C11B88F9900B8F04F</string>
-											<string>968B0B7D11B88F9900B8F04F</string>
-											<string>968B0B7E11B88F9900B8F04F</string>
 											<string>968B0B7F11B88F9900B8F04F</string>
-											<string>968B0B6711B8890C00B8F04F</string>
+											<string>968B0B9F11B8963700B8F04F</string>
+											<string>968B0BA011B8963700B8F04F</string>
+											<string>968B0BA111B8963700B8F04F</string>
+											<string>968B0BA211B8963700B8F04F</string>
+											<string>968B0BA311B8963700B8F04F</string>
+											<string>968B0BA411B8963700B8F04F</string>
+											<string>968B0BA511B8963700B8F04F</string>
+											<string>968B0BA611B8963700B8F04F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -547,9 +589,10 @@
 		<string>968B042A11B6E0CE00B8F04F</string>
 		<string>968B042B11B6E0CE00B8F04F</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>968B03DD11B6DF0D00B8F04F</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>968B03DD11B6DF0D00B8F04F</string>
 		<string>/Users/jason/projs/AppleProjects/maudir/maudir.xcodeproj</string>
+		<string>968B0BA811B8963700B8F04F</string>
 	</array>
 	<key>WindowString</key>
 	<string>1920 175 1919 1025 1920 120 1920 1080 </string>
@@ -933,7 +976,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

@@ -5,16 +5,13 @@
 
 #include "create_short_url.h"
 #include "redirect_url.h"
+#include "mau_config.h"
 
 int main (int argc, char * const argv[]) {
-	
-	u_short port = 1025;
-	const char *hostname = "127.0.0.1";
-
 	struct event_base *base = event_base_new();
 	struct evhttp *httpd = evhttp_new(base);
 	
-	evhttp_bind_socket(httpd, hostname, port);
+	evhttp_bind_socket(httpd, MAU_SERVER_NAME, MAU_LISTEN_PORT);
 	
 	//set two callbacks. one to create short URL's and one to 302 them
 	evhttp_set_cb(httpd, "/create/", CreateShortURL::http_create_url_handler, NULL);

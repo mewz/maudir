@@ -22,13 +22,7 @@
 #include "event_utils.h"
 #include "string_utils.h"
 #include "data_store.h"
-
-#ifndef SERVERHOST
-#define SERVERHOST "192.168.2.58"
-#endif
-#ifndef SERVERURL
-#define SERVERURL "http://192.168.2.58:1025/"
-#endif
+#include "mau_config.h"
 
 class CreateShortURL{
 public:

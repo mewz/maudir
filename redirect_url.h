@@ -18,13 +18,6 @@
 #include "string_utils.h"
 #include "data_store.h"
 
-#ifndef SERVERHOST
-#define SERVERHOST "192.168.2.58"
-#endif
-#ifndef SERVERURL
-#define SERVERURL "http://192.168.2.58:1025/"
-#endif
-
 class RedirectURL{
 public:
 	static void http_redirect_url_handler(struct evhttp_request*, void*);

@@ -50,7 +50,7 @@ string CreateShortURL::parse_path(string pathin){
 }
 
 bool CreateShortURL::is_valid_host(string host){
-	string server_host(strtolower(SERVERHOST));
+	string server_host(strtolower(MAU_SERVER_NAME));
 	string host_lower(strtolower(host.c_str()));
 	string localhost("localhost");
 	if(server_host == host_lower || host_lower == localhost){
@@ -81,7 +81,7 @@ void CreateShortURL::http_create_url_handler(struct evhttp_request *request, voi
 	string url = CreateShortURL::parse_url(req_uri, &noErr);
 	if(noErr){
 		const char* url_id = DataStore::create_short_url_from_url(url.c_str());
-		string short_url = SERVERURL;
+		string short_url = MAU_SERVER_URL;
 		if(url_id != NULL){
 			short_url += url_id;
 		}
