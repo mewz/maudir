@@ -13,7 +13,7 @@ void print_to_client(struct evhttp_request *request, const char *response_str){
 	evbuffer_add_printf(buff, "%s", response_str);
 	struct evkeyvalq *output_headers = evhttp_request_get_output_headers(request);
 	evhttp_add_header(output_headers, "Content-Type", "text/html; charset=UTF-8");
-	evhttp_send_reply(request, 200, HTTP_OK, buff);
+	evhttp_send_reply(request, 200, "OK", buff);
 	evbuffer_free(buff);
 }
 
