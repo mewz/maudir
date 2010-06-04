@@ -9,8 +9,7 @@
 int main (int argc, char * const argv[]) {
 	
 	u_short port = 1025;
-	//const char *hostname = "127.0.0.1";
-	const char *hostname = "192.168.2.58";
+	const char *hostname = "127.0.0.1";
 
 	struct event_base *base = event_base_new();
 	struct evhttp *httpd = evhttp_new(base);

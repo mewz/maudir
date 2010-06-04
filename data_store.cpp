@@ -10,8 +10,8 @@
 
 #define DB "urls"
 #define DBSERVER "localhost"
-#define DBUSER "someuser"
-#define DBPASSWORD "somepass"
+#define DBUSER "root"
+#define DBPASSWORD "pass1234"
 #define DBPORT 3306
 
 using namespace mysqlpp;
