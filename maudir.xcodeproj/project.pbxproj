@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		8DD76F6A0486A84900D96B5E /* maudir.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* maudir.1 */; };
+		968B03C411B6DBEF00B8F04F /* base62.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 968B03C311B6DBEF00B8F04F /* base62.cpp */; };
+		968B03D811B6DDBD00B8F04F /* create_short_url.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 968B03D711B6DDBD00B8F04F /* create_short_url.cpp */; };
+		968B047011B6E4A400B8F04F /* event_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 968B046F11B6E4A400B8F04F /* event_utils.cpp */; };
+		968B048E11B6EC6100B8F04F /* string_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 968B048D11B6EC6100B8F04F /* string_utils.cpp */; };
+		968B057A11B7000A00B8F04F /* data_store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 968B057911B7000A00B8F04F /* data_store.cpp */; };
+		968B09B411B85CF400B8F04F /* redirect_url.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 968B09B311B85CF400B8F04F /* redirect_url.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F6A0486A84900D96B5E /* maudir.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* maudir */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = maudir; sourceTree = BUILT_PRODUCTS_DIR; };
+		968B03C211B6DBEF00B8F04F /* base62.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base62.h; sourceTree = "<group>"; };
+		968B03C311B6DBEF00B8F04F /* base62.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base62.cpp; sourceTree = "<group>"; };
+		968B03D611B6DDBD00B8F04F /* create_short_url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = create_short_url.h; sourceTree = "<group>"; };
+		968B03D711B6DDBD00B8F04F /* create_short_url.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = create_short_url.cpp; sourceTree = "<group>"; };
+		968B046E11B6E4A400B8F04F /* event_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event_utils.h; sourceTree = "<group>"; };
+		968B046F11B6E4A400B8F04F /* event_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = event_utils.cpp; sourceTree = "<group>"; };
+		968B048C11B6EC6100B8F04F /* string_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string_utils.h; sourceTree = "<group>"; };
+		968B048D11B6EC6100B8F04F /* string_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = string_utils.cpp; sourceTree = "<group>"; };
+		968B057811B7000A00B8F04F /* data_store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data_store.h; sourceTree = "<group>"; };
+		968B057911B7000A00B8F04F /* data_store.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = data_store.cpp; sourceTree = "<group>"; };
+		968B09B211B85CF400B8F04F /* redirect_url.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = redirect_url.h; sourceTree = "<group>"; };
+		968B09B311B85CF400B8F04F /* redirect_url.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = redirect_url.cpp; sourceTree = "<group>"; };
+		C6859E8B029090EE04C91782 /* maudir.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = maudir.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* maudir */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = maudir;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				968B03C211B6DBEF00B8F04F /* base62.h */,
+				968B03C311B6DBEF00B8F04F /* base62.cpp */,
+				08FB7796FE84155DC02AAC07 /* main.cpp */,
+				968B03D611B6DDBD00B8F04F /* create_short_url.h */,
+				968B03D711B6DDBD00B8F04F /* create_short_url.cpp */,
+				968B046E11B6E4A400B8F04F /* event_utils.h */,
+				968B046F11B6E4A400B8F04F /* event_utils.cpp */,
+				968B048C11B6EC6100B8F04F /* string_utils.h */,
+				968B048D11B6EC6100B8F04F /* string_utils.cpp */,
+				968B057811B7000A00B8F04F /* data_store.h */,
+				968B057911B7000A00B8F04F /* data_store.cpp */,
+				968B09B211B85CF400B8F04F /* redirect_url.h */,
+				968B09B311B85CF400B8F04F /* redirect_url.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* maudir */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* maudir.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* maudir */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "maudir" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = maudir;
+			productInstallPath = "$(HOME)/bin";
+			productName = maudir;
+			productReference = 8DD76F6C0486A84900D96B5E /* maudir */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "maudir" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* maudir */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* maudir */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
+				968B03C411B6DBEF00B8F04F /* base62.cpp in Sources */,
+				968B03D811B6DDBD00B8F04F /* create_short_url.cpp in Sources */,
+				968B047011B6E4A400B8F04F /* event_utils.cpp in Sources */,
+				968B048E11B6EC6100B8F04F /* string_utils.cpp in Sources */,
+				968B057A11B7000A00B8F04F /* data_store.cpp in Sources */,
+				968B09B411B85CF400B8F04F /* redirect_url.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = maudir;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = maudir;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					/opt/local/include/,
+					/usr/local/mysql/include/,
+					"/usr/local/include/mysql++/",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					/usr/local/mysql/lib/,
+					/opt/local/lib/,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lwwwxml",
+					"-lxmltok",
+					"-lxmlparse",
+					"-lwwwzip",
+					"-lwwwinit",
+					"-lwwwapp",
+					"-lwwwhtml",
+					"-lwwwtelnet",
+					"-lwwwnews",
+					"-lwwwhttp",
+					"-lwwwmime",
+					"-lwwwgopher",
+					"-lwwwftp",
+					"-lwwwfile",
+					"-lwwwdir",
+					"-lwwwcache",
+					"-lwwwstream",
+					"-lwwwmux",
+					"-lwwwtrans",
+					"-lwwwcore",
+					"-lwwwutils",
+					"-lmd5",
+					"-ldl",
+					"-lz",
+					"-L/opt/local/lib",
+					"-lssl",
+					"-lcrypto",
+					"-lz",
+					"-lmysqlclient",
+					"-lidn",
+					"-lmemcached",
+					"-levent",
+					"-levent_core",
+					"-levent_pthreads",
+					"-levent_extra",
+					"-lpthread",
+					"-lmysqlpp",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					/opt/local/include/,
+					/usr/local/mysql/include/,
+					"/usr/local/include/mysql++/",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					/usr/local/mysql/lib/,
+					/opt/local/lib/,
+				);
+				OTHER_LDFLAGS = (
+					"-lwwwxml",
+					"-lxmltok",
+					"-lxmlparse",
+					"-lwwwzip",
+					"-lwwwinit",
+					"-lwwwapp",
+					"-lwwwhtml",
+					"-lwwwtelnet",
+					"-lwwwnews",
+					"-lwwwhttp",
+					"-lwwwmime",
+					"-lwwwgopher",
+					"-lwwwftp",
+					"-lwwwfile",
+					"-lwwwdir",
+					"-lwwwcache",
+					"-lwwwstream",
+					"-lwwwmux",
+					"-lwwwtrans",
+					"-lwwwcore",
+					"-lwwwutils",
+					"-lmd5",
+					"-ldl",
+					"-lz",
+					"-L/opt/local/lib",
+					"-lssl",
+					"-lcrypto",
+					"-lz",
+					"-lmysqlclient",
+					"-lidn",
+					"-lmemcached",
+					"-levent",
+					"-levent_core",
+					"-levent_pthreads",
+					"-levent_extra",
+					"-lpthread",
+					"-lmysqlpp",
+				);
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "maudir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "maudir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

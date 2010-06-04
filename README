@@ -1,0 +1,6 @@
+URL shortening service - 
+Required libs:
+
+libmemcached
+mysql++
+libevent2
