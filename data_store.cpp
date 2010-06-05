@@ -47,7 +47,7 @@ const char* DataStore::short_url_from_url(const char *url){
 				u_int64_t id = atoll((char*)t_url);
 				resstr = (char*)malloc(sizeof(id)*2);
 				memset(resstr, '\0', sizeof(id)*2);
-				sprintf(resstr, "%llu", id);
+				sprintf(resstr, "%llu", (unsigned long long)id);
 				return (const char*)resstr;
 			}
 		}
