@@ -1,11 +1,10 @@
 all: maudir
 
-WARNINGS1 :=					\
+WARNINGS :=					\
 	-Wall					\
 	-Werror					\
 	-Wredundant-decls			\
 	-Wmissing-noreturn			\
-	-Wshadow				\
 	-Wcast-align				\
 	-Wwrite-strings				\
 	-Winline				\
@@ -16,7 +15,6 @@ WARNINGS1 :=					\
 	-Winit-self				\
 	-Wmissing-include-dirs			\
 	-Wundef					\
-	-Waggregate-return			\
 	-Wmissing-format-attribute		\
 	$(NULL)
 
