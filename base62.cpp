@@ -7,7 +7,7 @@
 
 #include "base62.h"
 
-const char *base_vals = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+static const char base_vals[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 char* encode_base62(u_int64_t val){
 	char *str = (char*)malloc(1);
@@ -32,7 +32,8 @@ u_int64_t decode_base62(char *str){
 			return -1;
 		}
 		int j;
-		for(j = 0; j < strlen(base_vals); j++){
+		int len = sizeof(base_vals);
+		for(j = 0; j < len; j++){
 			if(base_vals[j] == c) break;
 		}
 		val += j * pow(62, len-i-1);
