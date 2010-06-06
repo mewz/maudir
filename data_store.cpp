@@ -104,7 +104,12 @@ const char* DataStore::memcached_url_from_key(const char* key){
 const char* DataStore::mysql_url_from_key(const char* key){
 	DataStore::init_services();
 	char* url_redir = NULL;
-	uint64_t store_id = decode_base62((char*)key);
+	guint64 store_id;
+
+	if (!base62_decode_uint64(key, &store_id)) {
+		return NULL;
+	}
+
 	Query query = conn.query();
 	query << "SELECT url from url_1 where id = " << store_id;
 	if(StoreQueryResult res = query.store()){

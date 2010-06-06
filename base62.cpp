@@ -7,9 +7,9 @@
 
 #include "base62.h"
 
-static const char base_vals[] = "0123456789"
-                                "abcdefghijklmnopqrstuvwxyz"
-                                "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+static const char base62_vals[] = "0123456789"
+                                  "abcdefghijklmnopqrstuvwxyz"
+                                  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 static const int base62_index[] = {
 	   0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,    0, 
@@ -53,7 +53,7 @@ base62_encode_uint64 (guint64  val, /* IN */
 		if (i + 1 >= len)
 			return FALSE;
 		v = val % 62;
-		str[i++] = base_vals[v];
+		str[i++] = base62_vals[v];
 		val = (val - v) / 62;
 	} while (val > 0);
 	str[i] = '\0';
@@ -71,22 +71,26 @@ base62_encode_uint64 (guint64  val, /* IN */
  * Returns: %TRUE if successful; otherwise %FALSE.
  * Side effects: None.
  */
-guint64
-decode_base62 (char *str) /* IN */
+gboolean
+base62_decode_uint64 (const char *str, /* IN */
+                      guint64    *val) /* IN */
 {
-	int len = strlen(str);
-	u_int64_t val = 0;
-	for(int i = 0; i < len; i ++){
-		char c = str[i];
-		if(!isalnum(c)){
-			return -1;
+	guint64 v = 0;
+	char c;
+	int len;
+	int i;
+
+	g_return_val_if_fail(str != NULL, FALSE);
+	g_return_val_if_fail(val != NULL, FALSE);
+
+	len = strlen(str);
+	for (i = 0; i < len; i++) {
+		c = str[i];
+		if (!g_ascii_isalnum(c)) {
+			return FALSE;
 		}
-		int j;
-		int len = sizeof(base_vals);
-		for(j = 0; j < len; j++){
-			if(base_vals[j] == c) break;
-		}
-		val += j * pow(62, len-i-1);
+		v += base62_index[(int)c] * pow(62, len - i - 1);
 	}
-	return val;	
+	*val = v;
+	return TRUE;	
 }

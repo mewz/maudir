@@ -15,9 +15,10 @@
 #include <math.h>
 #include <ctype.h>
 
-gboolean base62_encode_uint64 (guint64  val,
-                               char    *str,
-                               int      len);
-guint64  decode_base62        (char    *str);
+gboolean base62_encode_uint64 (guint64     val,
+                               char       *str,
+                               int         len);
+gboolean base62_decode_uint64 (const char *str,
+                               guint64    *val);
 
 #endif
