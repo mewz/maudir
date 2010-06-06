@@ -4,3 +4,4 @@ Required libs:
 libmemcached
 mysql++
 libevent2
+libglib2.0
