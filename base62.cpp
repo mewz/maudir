@@ -5,6 +5,12 @@
  *
  */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
+
 #include "base62.h"
 
 static const char base62_vals[] = "0123456789"

@@ -9,11 +9,6 @@
 #define __BASE_62_H_
 
 #include <glib.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-#include <ctype.h>
 
 gboolean base62_encode_uint64 (guint64     val,
                                char       *str,
