@@ -10,14 +10,32 @@
 
 using namespace std;
 
-void RedirectURL::http_redirect_url_handler(struct evhttp_request *request, void *args){
-	const char* req_uri = evhttp_request_uri(request);
+/**
+ * RedirectURL::http_redirect_url_handler:
+ * @request: An incoming evhttp_request.
+ * @args:
+ *
+ * Redirect url handler for libevent2.
+ *
+ * Returns: None.
+ * Side effects: None.
+ */
+void
+RedirectURL::http_redirect_url_handler (struct evhttp_request *request, /* IN */
+                                        void                  *args)    /* IN */
+{
+	const char *req_uri;
+	char *url;
+
+	g_return_if_fail(request != NULL);
+
+	req_uri = evhttp_request_uri(request);
 	req_uri++;
-	const char* url = DataStore::value_from_key(req_uri);
-	if(url != NULL){
+	url = DataStore::value_from_key(req_uri);
+	if (url != NULL) {
 		redirect_client(request, url);
-	}
-	else{
+	} else {
 		print_to_client(request, "invalid id");
 	}
+	free(url);
 }

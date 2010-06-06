@@ -27,8 +27,8 @@ public:
 	static void init_services(void);
 	static const char* short_url_from_url(const char*);
 	static const char* create_short_url_from_url(const char *);
-	static const char* memcached_url_from_key(const char*);
-	static const char* value_from_key(const char*);
-	static const char* mysql_url_from_key(const char*);
+	static char* memcached_url_from_key(const char*);
+	static char* value_from_key(const char*);
+	static char* mysql_url_from_key(const char*);
 };
 #endif
