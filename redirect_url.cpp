@@ -40,4 +40,5 @@ RedirectURL::http_redirect_url_handler(struct evhttp_request *request, void *arg
 	else{
 		print_to_client(request, "invalid id");
 	}
+	delete url;
 }
