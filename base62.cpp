@@ -64,7 +64,7 @@ base62_encode_uint64 (guint64  val, /* IN */
 /**
  * decode_base62:
  * @str: A base62 encoded string.
- * @v_uint64: A location for a #guint64. TODO
+ * @val: A location for a #guint64.
  *
  * Decodes a #guint64 from a base62 encoded string.
  *
