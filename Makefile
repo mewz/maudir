@@ -65,7 +65,7 @@ SOURCES =					\
 	data_store.cpp				\
 	$(NULL)
 
-%.o: %.cpp
+%.o: %.cpp %.h
 	@echo "  C++\t$@"
 	@g++ -g -c -o $*.o -fPIC $(WARNINGS) $(INCLUDES) $*.cpp
 
