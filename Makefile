@@ -76,3 +76,4 @@ maudir: $(SOURCES:.cpp=.o)
 
 clean:
 	rm -f maudir *.o
+
