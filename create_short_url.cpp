@@ -15,7 +15,7 @@ string CreateShortURL::parse_url(std::string urlin, bool *err){
 	HTLibInit("CreateShortURL", "1.0");
 	bool parsedOK = false;
 	if(HTURL_isAbsolute(urlin.c_str())){
-		const char* strtoparse = strtolower(urlin.c_str());
+		char* strtoparse = g_utf8_strdown(urlin.c_str(), -1);
 		string scheme = HTParse(strtoparse, "", PARSE_ACCESS);
 		if(scheme == "http" || scheme == "https"){
 			string host = HTParse(strtoparse, "", PARSE_HOST);
@@ -25,6 +25,7 @@ string CreateShortURL::parse_url(std::string urlin, bool *err){
 				parsedURL = scheme + "://" + host + "/" + path;
 			}
 		}
+		g_free(strtoparse);
 	}
 	
 	HTLibTerminate();
@@ -50,21 +51,27 @@ string CreateShortURL::parse_path(string pathin){
 }
 
 bool CreateShortURL::is_valid_host(string host){
-	string server_host(strtolower(MAU_SERVER_NAME));
-	string host_lower(strtolower(host.c_str()));
-	string localhost("localhost");
-	if(server_host == host_lower || host_lower == localhost){
-		return false;
+	char *server_host = g_utf8_strdown(MAU_SERVER_NAME, -1); // make const, do once at startup
+	char *host_lower = g_utf8_strdown(host.c_str(), -1);
+	bool ret = false;
+	size_t i;
+
+	if ((g_strcmp0(server_host, host_lower) == 0) ||
+	    (g_strcmp0(host_lower, "localhost") == 0)) {
+		goto cleanup;
 	}
 	//cheap way of parsing for a domain -
 	//we do not support IP addresses, so make sure the host contains at least one alpha
-	for(size_t i = 0; i < host.length(); i ++){
-		char c = host.at(i);
-		if(c > 57){
-			return true;
+	for (i = 0; i < host.length(); i++) {
+		if (g_ascii_isalpha(host.at(i))) {
+			ret = true;
+			goto cleanup;
 		}
 	}
-	return false;
+  cleanup:
+  	g_free(server_host);
+  	g_free(host_lower);
+	return ret;
 }
 
 void CreateShortURL::http_create_url_handler(struct evhttp_request *request, void *args){

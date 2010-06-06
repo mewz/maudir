@@ -10,6 +10,7 @@
 #ifndef __CREATE_SHORT_URL_H_
 #define __CREATE_SHORT_URL_H_
 
+#include <glib.h>
 #include <iostream>
 #include <string>
 #include <string.h>
@@ -20,7 +21,6 @@
 #include <wwwconf.h>
 #include <w3c-libwww/WWWLib.h>
 #include "event_utils.h"
-#include "string_utils.h"
 #include "data_store.h"
 #include "mau_config.h"
 

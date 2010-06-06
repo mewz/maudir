@@ -15,7 +15,6 @@
 #include <event2/http.h>
 #include <event2/http_compat.h>
 #include "event_utils.h"
-#include "string_utils.h"
 #include "data_store.h"
 
 class RedirectURL{

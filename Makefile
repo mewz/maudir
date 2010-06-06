@@ -23,6 +23,7 @@ INCLUDES =					\
 	-I/usr/include/mysql			\
 	-I/usr/include/mysql++			\
 	$(shell pkg-config --cflags libevent)	\
+	$(shell pkg-config --cflags glib-2.0)	\
 	$(NULL)
 
 LDFLAGS =					\
@@ -30,6 +31,7 @@ LDFLAGS =					\
 	-lmysqlpp				\
 	-lmemcached				\
 	$(shell pkg-config --libs libevent)	\
+	$(shell pkg-config --libs glib-2.0)	\
 	-lwwwhttp				\
 	-lwwwxml				\
 	-lxmltok				\
@@ -55,7 +57,6 @@ LDFLAGS =					\
 	$(NULL)
 
 SOURCES =					\
-	string_utils.cpp			\
 	create_short_url.cpp			\
 	redirect_url.cpp			\
 	base62.cpp				\

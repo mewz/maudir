@@ -9,13 +9,13 @@
 #ifndef __DATA_STORE__H_
 #define __DATA_STORE__H_
 
+#include <glib.h>
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include <libmemcached/memcached.h>
 #include <mysql++.h>
 #include <iostream>
-#include "string_utils.h"
 #include "base62.h"
 #include "mau_config.h"
 

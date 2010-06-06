@@ -19,7 +19,7 @@ char* encode_base62(u_int64_t val){
 		str[strlen(str)] = base_vals[i];
 		val = (val - i) / 62;
 	}while(val > 0);
-	reverse_str(str);
+	g_strreverse(str);
 	return str;	
 }
 
