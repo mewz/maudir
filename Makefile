@@ -69,6 +69,10 @@ SOURCES =					\
 	@echo "  C++\t$@"
 	@g++ -g -c -o $*.o -fPIC $(WARNINGS) $(INCLUDES) $*.cpp
 
+main.o: main.cpp
+	@echo "  C++\t$@"
+	@g++ -g -c -o $@ -fPIC $(WARNINGS) $(INCLUDES) main.cpp
+
 maudir: $(SOURCES:.cpp=.o)
 	@echo "  LINK\t$@"
 	@g++ -g -o $@ -fPIC $(WARNINGS) $(SOURCES:.cpp=.o) $(LDFLAGS)
