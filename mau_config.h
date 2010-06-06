@@ -3,7 +3,6 @@
  *  maudir
  *
  *  Created by Jason Hullinger on 6/3/10.
- *
  */
 
 #ifndef MAU_SERVER_INFO

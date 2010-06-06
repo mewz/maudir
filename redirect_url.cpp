@@ -3,7 +3,6 @@
  *  maudir
  *
  *  Created by Jason Hullinger on 6/3/10.
- *
  */
 
 #include "redirect_url.h"

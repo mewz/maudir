@@ -2,7 +2,6 @@
  *  base62.c
  *
  *  Created by Jason Hullinger on 5/27/10.
- *
  */
 
 #include <assert.h>

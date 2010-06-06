@@ -2,7 +2,6 @@
  *  base62.h
  *
  *  Created by Jason Hullinger on 5/27/10.
- *
  */
 
 #ifndef __BASE_62_H_

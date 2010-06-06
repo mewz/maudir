@@ -3,7 +3,6 @@
  *  maudir
  *
  *  Created by Jason Hullinger on 6/2/10.
- *
  */
 
 #ifndef __STRING_URTILS_H_
