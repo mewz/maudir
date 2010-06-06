@@ -10,47 +10,92 @@
 
 using namespace std;
 
-string CreateShortURL::parse_url(std::string urlin, bool *err){
-	string parsedURL = "";
-	HTLibInit("CreateShortURL", "1.0");
-	bool parsedOK = false;
-	if(HTURL_isAbsolute(urlin.c_str())){
-		char* strtoparse = g_utf8_strdown(urlin.c_str(), -1);
-		string scheme = HTParse(strtoparse, "", PARSE_ACCESS);
-		if(scheme == "http" || scheme == "https"){
-			string host = HTParse(strtoparse, "", PARSE_HOST);
-			if(CreateShortURL::is_valid_host(host)){
-				parsedOK = true;
-				string path = CreateShortURL::parse_path(HTParse(urlin.c_str(), "", PARSE_PATH));
-				parsedURL = scheme + "://" + host + "/" + path;
-			}
-		}
-		g_free(strtoparse);
+gboolean
+CreateShortURL::parse_url (const char  *inUrl,  /* IN */
+                           char       **outUrl) /* OUT */
+{
+	static gsize initialized = FALSE;
+	gboolean ret = FALSE;
+	char *downstr = NULL;
+	char *scheme = NULL;
+	char *host = NULL;
+	char *rawPath = NULL;
+	char *path = NULL;
+
+	if (g_once_init_enter(&initialized)) {
+		HTLibInit("CreateShortURL", "1.0");
+		g_once_init_leave(&initialized, TRUE);
 	}
-	
-	HTLibTerminate();
-	*err = parsedOK;
-	return parsedURL;
+
+	*outUrl = NULL;
+	if (HTURL_isAbsolute(inUrl)) {
+		if (!(downstr = g_utf8_strdown(inUrl, -1))) {
+			goto invalid_encoding;
+		}
+		if (!(scheme = HTParse(downstr, "", PARSE_ACCESS))) {
+			goto invalid_url;
+		}
+		if (strcmp(scheme, "http") != 0 && strcmp(scheme, "https") != 0) {
+			goto invalid_scheme;
+		}
+		if (!(host = HTParse(downstr, "", PARSE_HOST))) {
+			goto invalid_host;
+		}
+		if (!CreateShortURL::is_valid_host(host)) {
+			goto invalid_host;
+		}
+		if (!(rawPath = HTParse(inUrl, "", PARSE_PATH))) {
+			goto invalid_path;
+		}
+		if (!(path = CreateShortURL::parse_path(rawPath))) {
+			goto invalid_path;
+		}
+		*outUrl = g_strdup_printf("%s://%s/%s", scheme, host, path);
+		ret = TRUE;
+	}
+  invalid_encoding:
+  invalid_url:
+  invalid_scheme:
+  invalid_host:
+  invalid_path:
+	g_free(downstr);
+	g_free(scheme);
+	g_free(host);
+  	return ret;
 }
 
-string CreateShortURL::parse_path(string pathin){
-	string path = "";
-	//remove all leading '/' - only 1 is needed
-	bool insertPath = false;
-	for(size_t i = 0; i < pathin.length(); i ++){
-		if(!insertPath){
-			if(pathin.at(i) != '/'){
-				insertPath = true;
-				path.append(1, pathin.at(i));
+char*
+CreateShortURL::parse_path (const char *inPath) /* IN */
+{
+	gboolean insertPath = FALSE;
+	GString *str;
+	gchar *ret;
+	int len;
+	int i;
+
+	g_return_val_if_fail(inPath != NULL, NULL);
+
+	len = strlen(inPath);
+	str = g_string_sized_new(len);
+	for (i = 0; i < len; i++) {
+		if (!insertPath) {
+			if (inPath[i] != '/') {
+				insertPath = TRUE;
+				g_string_append_c(str, '/');
+				g_string_append_c(str, inPath[i]);
 			}
 			continue;
 		}
-		path.append(1, pathin.at(i));
+		g_string_append_c(str, inPath[i]);
 	}
-	return path;
+	ret = str->str;
+	g_string_free(str, FALSE);
+	return ret;
 }
 
-bool CreateShortURL::is_valid_host(string host){
+bool
+CreateShortURL::is_valid_host(string host)
+{
 	char *server_host = g_utf8_strdown(MAU_SERVER_NAME, -1); // make const, do once at startup
 	char *host_lower = g_utf8_strdown(host.c_str(), -1);
 	bool ret = false;
@@ -84,16 +129,17 @@ void CreateShortURL::http_create_url_handler(struct evhttp_request *request, voi
 	//remove the path and start of the query
 	req_uri = req_uri.substr(create_query.length(), req_uri.length());
 	
-	bool noErr;
-	string url = CreateShortURL::parse_url(req_uri, &noErr);
-	if(noErr){
-		const char* url_id = DataStore::create_short_url_from_url(url.c_str());
+	char *url;
+
+	if (CreateShortURL::parse_url(req_uri.c_str(), &url)) {
+		const char* url_id = DataStore::create_short_url_from_url(url);
 		string short_url = MAU_SERVER_URL;
 		if(url_id != NULL){
 			short_url += url_id;
 		}
 		//string output = "<a href='" + short_url + "'>" + short_url + "</a>";
 		print_to_client(request, short_url.c_str());
+		g_free(url);
 	}
 	else{
 		print_to_client(request, "not a valid URL");
