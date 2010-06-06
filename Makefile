@@ -24,6 +24,8 @@ INCLUDES =					\
 	-I/usr/include/mysql++			\
 	$(shell pkg-config --cflags libevent)	\
 	$(shell pkg-config --cflags glib-2.0)	\
+	-DG_LOG_DOMAIN=\""maudir"\"		\
+	-DENABLE_TRACE				\
 	$(NULL)
 
 LDFLAGS =					\
@@ -63,6 +65,7 @@ SOURCES =					\
 	main.cpp				\
 	event_utils.cpp				\
 	data_store.cpp				\
+	log.cpp					\
 	$(NULL)
 
 %.o: %.cpp %.h

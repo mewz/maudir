@@ -7,6 +7,7 @@
  */
 
 #include "create_short_url.h"
+#include "log.h"
 
 using namespace std;
 
@@ -22,7 +23,9 @@ CreateShortURL::parse_url (const char  *inUrl,  /* IN */
 	char *rawPath = NULL;
 	char *path = NULL;
 
+	ENTRY;
 	if (g_once_init_enter(&initialized)) {
+		DEBUG("Initializing HTLib.");
 		HTLibInit("CreateShortURL", "1.0");
 		g_once_init_leave(&initialized, TRUE);
 	}
@@ -30,25 +33,25 @@ CreateShortURL::parse_url (const char  *inUrl,  /* IN */
 	*outUrl = NULL;
 	if (HTURL_isAbsolute(inUrl)) {
 		if (!(downstr = g_utf8_strdown(inUrl, -1))) {
-			goto invalid_encoding;
+			GOTO(invalid_encoding);
 		}
 		if (!(scheme = HTParse(downstr, "", PARSE_ACCESS))) {
-			goto invalid_url;
+			GOTO(invalid_url);
 		}
 		if (strcmp(scheme, "http") != 0 && strcmp(scheme, "https") != 0) {
-			goto invalid_scheme;
+			GOTO(invalid_scheme);
 		}
 		if (!(host = HTParse(downstr, "", PARSE_HOST))) {
-			goto invalid_host;
+			GOTO(invalid_host);
 		}
 		if (!CreateShortURL::is_valid_host(host)) {
-			goto invalid_host;
+			GOTO(invalid_host);
 		}
 		if (!(rawPath = HTParse(inUrl, "", PARSE_PATH))) {
-			goto invalid_path;
+			GOTO(invalid_path);
 		}
 		if (!(path = CreateShortURL::parse_path(rawPath))) {
-			goto invalid_path;
+			GOTO(invalid_path);
 		}
 		*outUrl = g_strdup_printf("%s://%s/%s", scheme, host, path);
 		ret = TRUE;
@@ -61,7 +64,7 @@ CreateShortURL::parse_url (const char  *inUrl,  /* IN */
 	g_free(downstr);
 	g_free(scheme);
 	g_free(host);
-  	return ret;
+  	RETURN(ret);
 }
 
 char*
@@ -75,6 +78,7 @@ CreateShortURL::parse_path (const char *inPath) /* IN */
 
 	g_return_val_if_fail(inPath != NULL, NULL);
 
+	ENTRY;
 	len = strlen(inPath);
 	str = g_string_sized_new(len);
 	for (i = 0; i < len; i++) {
@@ -90,7 +94,7 @@ CreateShortURL::parse_path (const char *inPath) /* IN */
 	}
 	ret = str->str;
 	g_string_free(str, FALSE);
-	return ret;
+	RETURN(ret);
 }
 
 gboolean
@@ -102,31 +106,32 @@ CreateShortURL::is_valid_host (const char *host) /* IN */
 	char *host_lower;
 	int i;
 
+	ENTRY;
 	if (g_once_init_enter(&initialized)) {
 		server_host = g_utf8_strdown(MAU_SERVER_NAME, -1);
 		g_once_init_leave(&initialized, TRUE);
 	}
 
 	if (!(host_lower = g_utf8_strdown(host, -1))) {
-		goto invalid_encoding;
+		GOTO(invalid_encoding);
 	}
 	if ((g_strcmp0(server_host, host_lower) == 0) ||
 	    (g_strcmp0(host_lower, "localhost") == 0)) {
-		goto invalid_host;
+		GOTO(invalid_host);
 	}
 	//cheap way of parsing for a domain -
 	//we do not support IP addresses, so make sure the host contains at least one alpha
 	for (i = 0; host[i]; i++) {
 		if (g_ascii_isalpha(host[i])) {
 			ret = TRUE;
-			goto success;
+			GOTO(success);
 		}
 	}
   invalid_encoding:
   invalid_host:
   success:
   	g_free(host_lower);
-	return ret;
+	RETURN(ret);
 }
 
 void
@@ -141,10 +146,11 @@ CreateShortURL::http_create_url_handler (struct evhttp_request *request,
 
 	g_return_if_fail(request != NULL);
 
+	ENTRY;
 	req_uri = evhttp_request_uri(request);
 	if (strlen(req_uri) < sizeof(create_query)) {
 		print_to_client(request, "invalid query param");
-		return;
+		EXIT;
 	}
 
 	//remove the path and start of the query
@@ -164,4 +170,5 @@ CreateShortURL::http_create_url_handler (struct evhttp_request *request,
 	} else {
 		print_to_client(request, "not a valid URL");
 	}
+	EXIT;
 }

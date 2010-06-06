@@ -7,34 +7,46 @@
  */
 
 #include "data_store.h"
+#include "log.h"
 
 using namespace mysqlpp;
 
 static memcached_st *tcp_client = NULL;
 static Connection conn;
 
-void DataStore::init_memcached(){
+void
+DataStore::init_memcached(){
+	ENTRY;
 	if(tcp_client == NULL){
 		tcp_client = memcached_create(NULL);
 		memcached_server_add(tcp_client, "127.0.0.1", 11211);
 	}
+	EXIT;
 }
 
-void DataStore::init_mysql(){
+void
+DataStore::init_mysql(){
+	ENTRY;
 	if(!conn.connected()){
 		if(!conn.connect(DB, DBSERVER, DBUSER, DBPASSWORD, DBPORT)){
 			fprintf(stderr, "Fatal error: Could not connect to MySQL server");
 			exit(-1);
 		}
 	}
+	EXIT;
 }
 
-void DataStore::init_services(){
+void
+DataStore::init_services(){
+	ENTRY;
 	DataStore::init_memcached();
 	DataStore::init_mysql();
+	EXIT;
 }
 
-char* DataStore::short_url_from_url(const char *url){
+char*
+DataStore::short_url_from_url (const char *url) /* IN */
+{
 	DataStore::init_services();
 	//must query MySQL - memcached only stores the shorturl=>url
 	char *resstr = NULL;
@@ -68,6 +80,7 @@ DataStore::create_short_url_from_url (const char *url) /* IN */
 	char *resset;
 	char encoded[12] = { 0 };
 
+	ENTRY;
 	DataStore::init_services();
 
 	if (!(resset = DataStore::short_url_from_url(url))) {
@@ -95,7 +108,7 @@ DataStore::create_short_url_from_url (const char *url) /* IN */
 			resset = NULL;
 		}
 	}
-	return resset;
+	RETURN(resset);
 }
 
 char*
@@ -105,13 +118,14 @@ DataStore::memcached_url_from_key (const char* key) /* IN */
 	size_t string_len;
 	uint32_t flags;
 
+	ENTRY;
 	DataStore::init_services();
 
 	// Resulting string is NULL-terminated.
-	return memcached_get(tcp_client,
+	RETURN(memcached_get(tcp_client,
 	                     key, strlen(key) + 1,
 	                     &string_len,
-	                     &flags, &rc);
+	                     &flags, &rc));
 }
 
 char*
@@ -120,10 +134,11 @@ DataStore::mysql_url_from_key (const char* key) /* IN */
 	char* url_redir = NULL;
 	guint64 store_id;
 
+	ENTRY;
 	DataStore::init_services();
 
 	if (!base62_decode_uint64(key, &store_id)) {
-		return NULL;
+		RETURN(NULL);
 	}
 
 	Query query = conn.query();
@@ -138,7 +153,7 @@ DataStore::mysql_url_from_key (const char* key) /* IN */
 			              (time_t)0, (uint32_t)0);
 		}
 	}
-	return url_redir;
+	RETURN(url_redir);
 }
 
 char*
@@ -146,10 +161,10 @@ DataStore::value_from_key (const char* key) /* IN */
 {
 	char *value;
 
+	ENTRY;
 	DataStore::init_services();
-
 	if (!(value = DataStore::memcached_url_from_key(key))) {
 		value = DataStore::mysql_url_from_key(key);
 	}
-	return value;
+	RETURN(value);
 }
