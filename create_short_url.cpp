@@ -93,28 +93,38 @@ CreateShortURL::parse_path (const char *inPath) /* IN */
 	return ret;
 }
 
-bool
-CreateShortURL::is_valid_host(string host)
+gboolean
+CreateShortURL::is_valid_host (const char *host) /* IN */
 {
-	char *server_host = g_utf8_strdown(MAU_SERVER_NAME, -1); // make const, do once at startup
-	char *host_lower = g_utf8_strdown(host.c_str(), -1);
-	bool ret = false;
-	size_t i;
+	static gsize initialized = FALSE;
+	static char *server_host;
+	gboolean ret = false;
+	char *host_lower;
+	int i;
 
+	if (g_once_init_enter(&initialized)) {
+		server_host = g_utf8_strdown(MAU_SERVER_NAME, -1);
+		g_once_init_leave(&initialized, TRUE);
+	}
+
+	if (!(host_lower = g_utf8_strdown(host, -1))) {
+		goto invalid_encoding;
+	}
 	if ((g_strcmp0(server_host, host_lower) == 0) ||
 	    (g_strcmp0(host_lower, "localhost") == 0)) {
-		goto cleanup;
+		goto invalid_host;
 	}
 	//cheap way of parsing for a domain -
 	//we do not support IP addresses, so make sure the host contains at least one alpha
-	for (i = 0; i < host.length(); i++) {
-		if (g_ascii_isalpha(host.at(i))) {
-			ret = true;
-			goto cleanup;
+	for (i = 0; host[i]; i++) {
+		if (g_ascii_isalpha(host[i])) {
+			ret = TRUE;
+			goto success;
 		}
 	}
-  cleanup:
-  	g_free(server_host);
+  invalid_encoding:
+  invalid_host:
+  success:
   	g_free(host_lower);
 	return ret;
 }

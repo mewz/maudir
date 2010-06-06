@@ -26,10 +26,11 @@
 
 class CreateShortURL{
 public:
-	static void http_create_url_handler(struct evhttp_request*, void*);
-	static bool is_valid_host(std::string);
-	static gboolean parse_url(const char *inStr, char **outStr);
-	static char* parse_path(const char *inPath);
+	static void     http_create_url_handler (struct evhttp_request*, void*);
+	static gboolean is_valid_host           (const char  *host);
+	static gboolean parse_url               (const char  *inStr,
+	                                         char       **outStr);
+	static char*    parse_path              (const char  *inPath);
 };
 
 #endif
