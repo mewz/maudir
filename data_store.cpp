@@ -34,7 +34,7 @@ void DataStore::init_services(){
 	DataStore::init_mysql();
 }
 
-const char* DataStore::short_url_from_url(const char *url){
+char* DataStore::short_url_from_url(const char *url){
 	DataStore::init_services();
 	//must query MySQL - memcached only stores the shorturl=>url
 	char *resstr = NULL;
@@ -48,7 +48,7 @@ const char* DataStore::short_url_from_url(const char *url){
 				resstr = (char*)malloc(sizeof(id)*2);
 				memset(resstr, '\0', sizeof(id)*2);
 				sprintf(resstr, "%llu", (unsigned long long)id);
-				return (const char*)resstr;
+				return resstr;
 			}
 		}
 	}
@@ -59,16 +59,23 @@ const char* DataStore::short_url_from_url(const char *url){
 		std::cerr << err.what() << std::endl;
 	}
 	
-	return (const char*)resstr;
+	return resstr;
 }
 
-const char* DataStore::create_short_url_from_url(const char *url){
-	DataStore::init_services();
-	char *resset = (char*)DataStore::short_url_from_url(url);
+char*
+DataStore::create_short_url_from_url (const char *url) /* IN */
+{
+	static gsize initialized = FALSE;
+	char *resset;
 	char encoded[12] = { 0 };
-	if(resset == NULL){
-		try{
-			//insert into MySQL
+
+	if (g_once_init_enter(&initialized)) {
+		DataStore::init_services();
+		g_once_init_leave(&initialized, TRUE);
+	}
+
+	if (!(resset = DataStore::short_url_from_url(url))) {
+		try {
 			Query query = conn.query();
 			query << "INSERT INTO url_1(url) values(" << mysqlpp::quote << url << ")";
 			SimpleResult res = query.execute();
@@ -83,17 +90,21 @@ const char* DataStore::create_short_url_from_url(const char *url){
 		catch(const Exception& err){
 			std::cerr << err.what() << std::endl;
 		}
+	} else {
+		if (base62_encode_uint64(atoll(resset), encoded, sizeof(encoded))) {
+			g_free(resset);
+			resset = g_strdup(encoded);
+		} else {
+			g_free(resset);
+			resset = NULL;
+		}
 	}
-	else{
-		base62_encode_uint64(atoll(resset), encoded, sizeof(encoded));
-		free(resset);
-		return g_strdup(encoded);
-	}
-
-	return (const char*)resset;
+	return resset;
 }
 
-char* DataStore::memcached_url_from_key(const char* key){
+char*
+DataStore::memcached_url_from_key (const char* key) /* IN */
+{
 	DataStore::init_services();
 	memcached_return rc;
 	size_t string_len;
@@ -101,7 +112,9 @@ char* DataStore::memcached_url_from_key(const char* key){
 	return memcached_get(tcp_client, key, strlen(key), &string_len, &flags, &rc);
 }
 
-char* DataStore::mysql_url_from_key(const char* key){
+char*
+DataStore::mysql_url_from_key (const char* key) /* IN */
+{
 	DataStore::init_services();
 	char* url_redir = NULL;
 	guint64 store_id;

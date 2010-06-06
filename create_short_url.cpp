@@ -129,29 +129,39 @@ CreateShortURL::is_valid_host (const char *host) /* IN */
 	return ret;
 }
 
-void CreateShortURL::http_create_url_handler(struct evhttp_request *request, void *args){
-	string create_query("/create/?");
-	string req_uri(evhttp_request_uri(request));
-	if(req_uri.length() < create_query.length()){
+void
+CreateShortURL::http_create_url_handler (struct evhttp_request *request,
+                                         void                  *args)
+{
+	static const char create_query[] = "/create/?";
+	const char *req_uri;
+	char *url = NULL;
+	char *url_id;
+	char *real_url;
+
+	g_return_if_fail(request != NULL);
+
+	req_uri = evhttp_request_uri(request);
+	if (strlen(req_uri) < sizeof(create_query)) {
 		print_to_client(request, "invalid query param");
 		return;
 	}
-	//remove the path and start of the query
-	req_uri = req_uri.substr(create_query.length(), req_uri.length());
-	
-	char *url;
 
-	if (CreateShortURL::parse_url(req_uri.c_str(), &url)) {
-		const char* url_id = DataStore::create_short_url_from_url(url);
-		string short_url = MAU_SERVER_URL;
-		if(url_id != NULL){
-			short_url += url_id;
+	//remove the path and start of the query
+	req_uri += sizeof(create_query);
+
+	if (CreateShortURL::parse_url(req_uri, &url)) {
+		if (!(url_id = DataStore::create_short_url_from_url(url))) {
+			print_to_client(request, "invalid query param");
+			g_free(url);
+			return;
 		}
-		//string output = "<a href='" + short_url + "'>" + short_url + "</a>";
-		print_to_client(request, short_url.c_str());
+		real_url = g_strdup_printf("%s%s", MAU_SERVER_URL, url_id);
+		print_to_client(request, real_url);
+		g_free(url_id);
+		g_free(real_url);
 		g_free(url);
-	}
-	else{
+	} else {
 		print_to_client(request, "not a valid URL");
 	}
 }
