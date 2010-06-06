@@ -49,6 +49,7 @@ CreateShortURL::parse_url(std::string urlin, /* IN */
 				parsedURL = scheme + "://" + host + "/" + path;
 			}
 		}
+		delete strtoparse;
 	}
 	
 	HTLibTerminate();

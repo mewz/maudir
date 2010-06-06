@@ -171,12 +171,15 @@ DataStore::create_short_url_from_url(const char *url) /* IN */
 			base62_encode(res.insert_id(), encoded, sizeof(encoded));
 			//insert into memcached
 			memcached_set(tcp_client, encoded, strlen(encoded), url, strlen(url), (time_t)0, (uint32_t)0);
+			delete resset;
 			return strdup(encoded);
 		}
 		catch(const BadOption& err){
+			delete resset;
 			std::cerr << err.what() << std::endl;
 		}
 		catch(const Exception& err){
+			delete resset;
 			std::cerr << err.what() << std::endl;
 		}
 	}
@@ -185,7 +188,6 @@ DataStore::create_short_url_from_url(const char *url) /* IN */
 		if (base62_encode(atoll(resset), encoded, sizeof(encoded))) {
 			return strdup(encoded);
 		}
-		return NULL;
 	}
 	return NULL;
 }

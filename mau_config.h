@@ -17,8 +17,8 @@
 #define DB_SERVER_INFO
 #define DB "urls"
 #define DBSERVER "localhost"
-#define DBUSER "user"
-#define DBPASSWORD "pass"
+#define DBUSER "root"
+#define DBPASSWORD "pass1234"
 #define DBPORT 3006
 #endif
 
