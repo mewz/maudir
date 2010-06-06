@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>96964A2B11BB734A00AF2270</string>
+						<string>96964A6611BB78BE00AF2270</string>
 						<key>history</key>
 						<array>
 							<string>968B0BC111B8977B00B8F04F</string>
@@ -314,7 +314,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
+									<integer>10</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -357,7 +357,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>mau_config.h</string>
+								<string>string_utils.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -365,29 +365,29 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>mau_config.h</string>
+										<string>string_utils.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>96964A2A11BB734A00AF2270</string>
+										<string>96964A6511BB78BE00AF2270</string>
 										<key>history</key>
 										<array>
 											<string>968B0A2111B85FCE00B8F04F</string>
 											<string>968B0A2211B85FCE00B8F04F</string>
 											<string>96964A1C11BB734A00AF2270</string>
 											<string>96964A1D11BB734A00AF2270</string>
-											<string>96964A1E11BB734A00AF2270</string>
 											<string>96964A1F11BB734A00AF2270</string>
-											<string>96964A2011BB734A00AF2270</string>
 											<string>96964A2111BB734A00AF2270</string>
 											<string>96964A2211BB734A00AF2270</string>
 											<string>96964A2311BB734A00AF2270</string>
-											<string>96964A2411BB734A00AF2270</string>
 											<string>96964A2511BB734A00AF2270</string>
 											<string>96964A2611BB734A00AF2270</string>
-											<string>96964A2711BB734A00AF2270</string>
 											<string>96964A2811BB734A00AF2270</string>
-											<string>96964A2911BB734A00AF2270</string>
+											<string>96964A3011BB76AF00AF2270</string>
+											<string>96964A3C11BB778600AF2270</string>
+											<string>96964A3D11BB778600AF2270</string>
+											<string>96964A5D11BB78A100AF2270</string>
+											<string>96964A5E11BB78A100AF2270</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -585,13 +585,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>96964A6711BB78BE00AF2270</string>
 		<string>9696485011BAEEC700AF2270</string>
 		<string>9696485111BAEEC700AF2270</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>968B03DD11B6DF0D00B8F04F</string>
 		<string>968B0BA811B8963700B8F04F</string>
 		<string>/Users/jason/projs/AppleProjects/maudir_git/maudir/maudir.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1920 1119 0 0 1920 1178 </string>
@@ -975,7 +976,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

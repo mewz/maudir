@@ -930,6 +930,33 @@
 			96964A2911BB734A00AF2270 /* PBXTextBookmark */ = 96964A2911BB734A00AF2270 /* PBXTextBookmark */;
 			96964A2A11BB734A00AF2270 /* PBXTextBookmark */ = 96964A2A11BB734A00AF2270 /* PBXTextBookmark */;
 			96964A2B11BB734A00AF2270 /* PBXTextBookmark */ = 96964A2B11BB734A00AF2270 /* PBXTextBookmark */;
+			96964A3011BB76AF00AF2270 /* PBXTextBookmark */ = 96964A3011BB76AF00AF2270 /* PBXTextBookmark */;
+			96964A3111BB76AF00AF2270 /* PBXTextBookmark */ = 96964A3111BB76AF00AF2270 /* PBXTextBookmark */;
+			96964A3211BB76AF00AF2270 /* PBXTextBookmark */ = 96964A3211BB76AF00AF2270 /* PBXTextBookmark */;
+			96964A3311BB76AF00AF2270 /* PBXTextBookmark */ = 96964A3311BB76AF00AF2270 /* PBXTextBookmark */;
+			96964A3511BB774300AF2270 /* PBXTextBookmark */ = 96964A3511BB774300AF2270 /* PBXTextBookmark */;
+			96964A3C11BB778600AF2270 /* PBXTextBookmark */ = 96964A3C11BB778600AF2270 /* PBXTextBookmark */;
+			96964A3D11BB778600AF2270 /* PBXTextBookmark */ = 96964A3D11BB778600AF2270 /* PBXTextBookmark */;
+			96964A3E11BB778600AF2270 /* PBXTextBookmark */ = 96964A3E11BB778600AF2270 /* PBXTextBookmark */;
+			96964A3F11BB778600AF2270 /* PBXTextBookmark */ = 96964A3F11BB778600AF2270 /* PBXTextBookmark */;
+			96964A4111BB77BC00AF2270 /* PBXTextBookmark */ = 96964A4111BB77BC00AF2270 /* PBXTextBookmark */;
+			96964A4211BB77BF00AF2270 /* PBXTextBookmark */ = 96964A4211BB77BF00AF2270 /* PBXTextBookmark */;
+			96964A4711BB77E700AF2270 /* PBXTextBookmark */ = 96964A4711BB77E700AF2270 /* PBXTextBookmark */;
+			96964A4811BB77E700AF2270 /* PBXTextBookmark */ = 96964A4811BB77E700AF2270 /* PBXTextBookmark */;
+			96964A4A11BB781500AF2270 /* PBXTextBookmark */ = 96964A4A11BB781500AF2270 /* PBXTextBookmark */;
+			96964A4D11BB782F00AF2270 /* PBXTextBookmark */ = 96964A4D11BB782F00AF2270 /* PBXTextBookmark */;
+			96964A4E11BB782F00AF2270 /* PBXTextBookmark */ = 96964A4E11BB782F00AF2270 /* PBXTextBookmark */;
+			96964A5011BB784800AF2270 /* PBXTextBookmark */ = 96964A5011BB784800AF2270 /* PBXTextBookmark */;
+			96964A5511BB786500AF2270 /* PBXTextBookmark */ = 96964A5511BB786500AF2270 /* PBXTextBookmark */;
+			96964A5611BB786500AF2270 /* PBXTextBookmark */ = 96964A5611BB786500AF2270 /* PBXTextBookmark */;
+			96964A5811BB787100AF2270 /* PBXTextBookmark */ = 96964A5811BB787100AF2270 /* PBXTextBookmark */;
+			96964A5D11BB78A100AF2270 /* PBXTextBookmark */ = 96964A5D11BB78A100AF2270 /* PBXTextBookmark */;
+			96964A5E11BB78A100AF2270 /* PBXTextBookmark */ = 96964A5E11BB78A100AF2270 /* PBXTextBookmark */;
+			96964A5F11BB78A100AF2270 /* PBXTextBookmark */ = 96964A5F11BB78A100AF2270 /* PBXTextBookmark */;
+			96964A6011BB78A100AF2270 /* PBXTextBookmark */ = 96964A6011BB78A100AF2270 /* PBXTextBookmark */;
+			96964A6211BB78B900AF2270 /* PBXTextBookmark */ = 96964A6211BB78B900AF2270 /* PBXTextBookmark */;
+			96964A6511BB78BE00AF2270 /* PBXTextBookmark */ = 96964A6511BB78BE00AF2270 /* PBXTextBookmark */;
+			96964A6611BB78BE00AF2270 /* PBXTextBookmark */ = 96964A6611BB78BE00AF2270 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 968B03C511B6DBEF00B8F04F /* Source Control */;
 		userBuildSettings = {
@@ -938,8 +965,8 @@
 	08FB7796FE84155DC02AAC07 /* main.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1651, 1016}}";
-			sepNavSelRange = "{1, 0}";
-			sepNavVisRange = "{0, 701}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 700}";
 		};
 	};
 	8DD76F620486A84900D96B5E /* maudir */ = {
@@ -989,9 +1016,9 @@
 	};
 	968B03C311B6DBEF00B8F04F /* base62.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1651, 1352}}";
-			sepNavSelRange = "{62, 0}";
-			sepNavVisRange = "{0, 2281}";
+			sepNavIntBoundsRect = "{{0, 0}, {1007, 1339}}";
+			sepNavSelRange = "{2858, 0}";
+			sepNavVisRange = "{1310, 741}";
 			sepNavWindowFrame = "{{3855, 120}, {1902, 1080}}";
 		};
 	};
@@ -1018,9 +1045,9 @@
 	};
 	968B03D711B6DDBD00B8F04F /* create_short_url.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1651, 2249}}";
-			sepNavSelRange = "{84, 0}";
-			sepNavVisRange = "{0, 1988}";
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 2314}}";
+			sepNavSelRange = "{1057, 0}";
+			sepNavVisRange = "{781, 1878}";
 			sepNavWindowFrame = "{{3855, 120}, {1902, 1080}}";
 		};
 	};
@@ -1047,7 +1074,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 20";
 		rLen = 0;
-		rLoc = 686;
+		rLoc = 685;
 		rType = 0;
 		vrLen = 494;
 		vrLoc = 0;
@@ -1135,7 +1162,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 20";
 		rLen = 0;
-		rLoc = 686;
+		rLoc = 685;
 		rType = 0;
 		vrLen = 494;
 		vrLoc = 0;
@@ -1145,7 +1172,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 22";
 		rLen = 0;
-		rLoc = 686;
+		rLoc = 685;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 0;
@@ -1185,7 +1212,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 22";
 		rLen = 0;
-		rLoc = 491;
+		rLoc = 490;
 		rType = 0;
 		vrLen = 589;
 		vrLoc = 0;
@@ -1195,7 +1222,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 26";
 		rLen = 0;
-		rLoc = 685;
+		rLoc = 684;
 		rType = 0;
 		vrLen = 664;
 		vrLoc = 0;
@@ -1215,7 +1242,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 30";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 700;
 		rType = 0;
 		vrLen = 664;
 		vrLoc = 0;
@@ -1335,7 +1362,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 23";
 		rLen = 0;
-		rLoc = 530;
+		rLoc = 529;
 		rType = 0;
 		vrLen = 697;
 		vrLoc = 0;
@@ -1395,7 +1422,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 23";
 		rLen = 0;
-		rLoc = 507;
+		rLoc = 506;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -1405,7 +1432,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 23";
 		rLen = 0;
-		rLoc = 507;
+		rLoc = 506;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -1425,7 +1452,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 23";
 		rLen = 0;
-		rLoc = 507;
+		rLoc = 506;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -1582,9 +1609,9 @@
 	};
 	968B048D11B6EC6100B8F04F /* string_utils.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1651, 1079}}";
-			sepNavSelRange = "{80, 0}";
-			sepNavVisRange = "{0, 1514}";
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 1092}}";
+			sepNavSelRange = "{808, 0}";
+			sepNavVisRange = "{85, 1483}";
 		};
 	};
 	968B049911B6ED1D00B8F04F /* PBXTextBookmark */ = {
@@ -2315,7 +2342,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 31";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 700;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -3521,7 +3548,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 31";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 700;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -5121,7 +5148,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 31";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 700;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -5241,7 +5268,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 30";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 700;
 		rType = 0;
 		vrLen = 680;
 		vrLoc = 0;
@@ -5597,7 +5624,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 1";
 		rLen = 0;
-		rLoc = 1;
+		rLoc = 0;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -5781,7 +5808,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 21";
 		rLen = 0;
-		rLoc = 540;
+		rLoc = 539;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -6412,7 +6439,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 1";
 		rLen = 0;
-		rLoc = 1;
+		rLoc = 0;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -6602,7 +6629,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 1";
 		rLen = 0;
-		rLoc = 1;
+		rLoc = 0;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -6612,7 +6639,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 13";
 		rLen = 0;
-		rLoc = 235;
+		rLoc = 234;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -6642,7 +6669,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 25";
 		rLen = 0;
-		rLoc = 664;
+		rLoc = 663;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -6692,7 +6719,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 30";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 700;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -6942,7 +6969,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 30";
 		rLen = 0;
-		rLoc = 701;
+		rLoc = 700;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -7092,7 +7119,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 12";
 		rLen = 0;
-		rLoc = 235;
+		rLoc = 234;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -7102,7 +7129,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 12";
 		rLen = 0;
-		rLoc = 235;
+		rLoc = 234;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -7209,9 +7236,9 @@
 	};
 	968B0B8A11B8948800B8F04F /* mau_config.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1843, 952}}";
-			sepNavSelRange = "{565, 0}";
-			sepNavVisRange = "{0, 565}";
+			sepNavIntBoundsRect = "{{0, 0}, {1843, 929}}";
+			sepNavSelRange = "{568, 0}";
+			sepNavVisRange = "{0, 568}";
 		};
 	};
 	968B0B9311B895E700B8F04F /* PBXTextBookmark */ = {
@@ -7249,7 +7276,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 9";
 		rLen = 0;
-		rLoc = 565;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 84;
 		vrLoc = 0;
@@ -7259,7 +7286,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 10";
 		rLen = 0;
-		rLoc = 235;
+		rLoc = 234;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -7333,7 +7360,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 16";
 		rLen = 0;
-		rLoc = 565;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 252;
 		vrLoc = 0;
@@ -7423,7 +7450,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 425;
 		vrLoc = 0;
@@ -7453,7 +7480,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 429;
 		vrLoc = 0;
@@ -7511,7 +7538,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 429;
 		vrLoc = 0;
@@ -7541,7 +7568,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 429;
 		vrLoc = 0;
@@ -7571,7 +7598,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 24";
 		rLen = 0;
-		rLoc = 565;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 429;
 		vrLoc = 0;
@@ -7581,7 +7608,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 425;
 		vrLoc = 0;
@@ -7591,7 +7618,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 425;
 		vrLoc = 0;
@@ -7631,7 +7658,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 18";
 		rLen = 16;
-		rLoc = 540;
+		rLoc = 539;
 		rType = 0;
 		vrLen = 700;
 		vrLoc = 0;
@@ -7711,7 +7738,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 27";
 		rLen = 21;
-		rLoc = 488;
+		rLoc = 491;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -7761,7 +7788,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -7781,7 +7808,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -7811,7 +7838,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -7831,7 +7858,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -7911,7 +7938,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 27";
 		rLen = 21;
-		rLoc = 488;
+		rLoc = 491;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -7931,7 +7958,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -7981,7 +8008,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8021,7 +8048,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8051,7 +8078,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8071,7 +8098,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8101,7 +8128,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8141,7 +8168,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8151,7 +8178,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8171,7 +8198,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8211,7 +8238,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8241,7 +8268,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8261,7 +8288,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8271,7 +8298,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8281,7 +8308,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8291,7 +8318,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8391,7 +8418,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8451,7 +8478,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8471,7 +8498,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8491,7 +8518,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8511,7 +8538,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8521,7 +8548,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8531,7 +8558,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8551,7 +8578,7 @@
 		fRef = 968B048D11B6EC6100B8F04F /* string_utils.cpp */;
 		name = "string_utils.cpp: 55";
 		rLen = 0;
-		rLoc = 1089;
+		rLoc = 1085;
 		rType = 0;
 		vrLen = 1546;
 		vrLoc = 0;
@@ -8601,7 +8628,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8631,7 +8658,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8661,7 +8688,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8691,7 +8718,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8721,7 +8748,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8751,7 +8778,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8771,7 +8798,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8801,7 +8828,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8831,7 +8858,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8841,7 +8868,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -8851,7 +8878,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8861,7 +8888,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8871,7 +8898,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8911,7 +8938,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8958,7 +8985,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -8978,7 +9005,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9008,7 +9035,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9028,7 +9055,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9058,7 +9085,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9088,7 +9115,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9118,7 +9145,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9148,7 +9175,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9188,7 +9215,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9218,7 +9245,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9238,7 +9265,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9268,7 +9295,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9308,7 +9335,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9338,7 +9365,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9388,7 +9415,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9418,7 +9445,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 571;
 		vrLoc = 0;
@@ -9448,7 +9475,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -9458,7 +9485,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 567;
 		vrLoc = 0;
@@ -9468,7 +9495,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 0;
@@ -9478,7 +9505,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 21";
 		rLen = 0;
-		rLoc = 390;
+		rLoc = 393;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 0;
@@ -9488,7 +9515,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 30";
 		rLen = 0;
-		rLoc = 565;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 0;
@@ -9528,7 +9555,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 30";
 		rLen = 0;
-		rLoc = 565;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 0;
@@ -9558,7 +9585,7 @@
 		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
 		name = "main.cpp: 2";
 		rLen = 0;
-		rLoc = 1;
+		rLoc = 0;
 		rType = 0;
 		vrLen = 701;
 		vrLoc = 0;
@@ -9668,7 +9695,7 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 30";
 		rLen = 0;
-		rLoc = 565;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 0;
@@ -9688,9 +9715,279 @@
 		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
 		name = "mau_config.h: 29";
 		rLen = 0;
-		rLoc = 565;
+		rLoc = 568;
 		rType = 0;
 		vrLen = 565;
+		vrLoc = 0;
+	};
+	96964A3011BB76AF00AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 700;
+		vrLoc = 0;
+	};
+	96964A3111BB76AF00AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
+		name = "mau_config.h: 20";
+		rLen = 0;
+		rLoc = 394;
+		rType = 0;
+		vrLen = 565;
+		vrLoc = 0;
+	};
+	96964A3211BB76AF00AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
+		name = "mau_config.h: 20";
+		rLen = 0;
+		rLoc = 393;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 0;
+	};
+	96964A3311BB76AF00AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
+		name = "mau_config.h: 29";
+		rLen = 0;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 0;
+	};
+	96964A3511BB774300AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03C311B6DBEF00B8F04F /* base62.cpp */;
+		name = "base62.cpp: 115";
+		rLen = 0;
+		rLoc = 2858;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 1310;
+	};
+	96964A3C11BB778600AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
+		name = "mau_config.h: 20";
+		rLen = 0;
+		rLoc = 393;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 0;
+	};
+	96964A3D11BB778600AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B09B211B85CF400B8F04F /* redirect_url.h */;
+		name = "redirect_url.h: 6";
+		rLen = 0;
+		rLoc = 78;
+		rType = 0;
+		vrLen = 494;
+		vrLoc = 0;
+	};
+	96964A3E11BB778600AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03D711B6DDBD00B8F04F /* create_short_url.cpp */;
+		name = "create_short_url.cpp: 56";
+		rLen = 0;
+		rLoc = 1488;
+		rType = 0;
+		vrLen = 1962;
+		vrLoc = 28;
+	};
+	96964A3F11BB778600AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
+		name = "mau_config.h: 29";
+		rLen = 0;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 0;
+	};
+	96964A4111BB77BC00AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03C311B6DBEF00B8F04F /* base62.cpp */;
+		name = "base62.cpp: 115";
+		rLen = 0;
+		rLoc = 2858;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 1310;
+	};
+	96964A4211BB77BF00AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03C311B6DBEF00B8F04F /* base62.cpp */;
+		name = "base62.cpp: 115";
+		rLen = 0;
+		rLoc = 2858;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 1310;
+	};
+	96964A4711BB77E700AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03D711B6DDBD00B8F04F /* create_short_url.cpp */;
+		name = "create_short_url.cpp: 48";
+		rLen = 0;
+		rLoc = 1278;
+		rType = 0;
+		vrLen = 1853;
+		vrLoc = 669;
+	};
+	96964A4811BB77E700AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
+		name = "mau_config.h: 29";
+		rLen = 0;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 0;
+	};
+	96964A4A11BB781500AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03C311B6DBEF00B8F04F /* base62.cpp */;
+		name = "base62.cpp: 115";
+		rLen = 0;
+		rLoc = 2858;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 1310;
+	};
+	96964A4D11BB782F00AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03D711B6DDBD00B8F04F /* create_short_url.cpp */;
+		name = "create_short_url.cpp: 45";
+		rLen = 0;
+		rLoc = 1213;
+		rType = 0;
+		vrLen = 1855;
+		vrLoc = 699;
+	};
+	96964A4E11BB782F00AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
+		name = "mau_config.h: 29";
+		rLen = 0;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 0;
+	};
+	96964A5011BB784800AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03C311B6DBEF00B8F04F /* base62.cpp */;
+		name = "base62.cpp: 115";
+		rLen = 0;
+		rLoc = 2858;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 1310;
+	};
+	96964A5511BB786500AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03D711B6DDBD00B8F04F /* create_short_url.cpp */;
+		name = "create_short_url.cpp: 42";
+		rLen = 0;
+		rLoc = 1057;
+		rType = 0;
+		vrLen = 1858;
+		vrLoc = 781;
+	};
+	96964A5611BB786500AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
+		name = "mau_config.h: 29";
+		rLen = 0;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 0;
+	};
+	96964A5811BB787100AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03C311B6DBEF00B8F04F /* base62.cpp */;
+		name = "base62.cpp: 115";
+		rLen = 0;
+		rLoc = 2858;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 1310;
+	};
+	96964A5D11BB78A100AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03D711B6DDBD00B8F04F /* create_short_url.cpp */;
+		name = "create_short_url.cpp: 42";
+		rLen = 0;
+		rLoc = 1057;
+		rType = 0;
+		vrLen = 1878;
+		vrLoc = 781;
+	};
+	96964A5E11BB78A100AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B048D11B6EC6100B8F04F /* string_utils.cpp */;
+		name = "string_utils.cpp: 6";
+		rLen = 0;
+		rLoc = 80;
+		rType = 0;
+		vrLen = 1514;
+		vrLoc = 0;
+	};
+	96964A5F11BB78A100AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B048D11B6EC6100B8F04F /* string_utils.cpp */;
+		name = "string_utils.cpp: 41";
+		rLen = 0;
+		rLoc = 808;
+		rType = 0;
+		vrLen = 1483;
+		vrLoc = 85;
+	};
+	96964A6011BB78A100AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
+		name = "mau_config.h: 29";
+		rLen = 0;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 568;
+		vrLoc = 0;
+	};
+	96964A6211BB78B900AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B03C311B6DBEF00B8F04F /* base62.cpp */;
+		name = "base62.cpp: 115";
+		rLen = 0;
+		rLoc = 2858;
+		rType = 0;
+		vrLen = 741;
+		vrLoc = 1310;
+	};
+	96964A6511BB78BE00AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B048D11B6EC6100B8F04F /* string_utils.cpp */;
+		name = "string_utils.cpp: 41";
+		rLen = 0;
+		rLoc = 808;
+		rType = 0;
+		vrLen = 1483;
+		vrLoc = 85;
+	};
+	96964A6611BB78BE00AF2270 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 968B0B8A11B8948800B8F04F /* mau_config.h */;
+		name = "mau_config.h: 29";
+		rLen = 0;
+		rLoc = 568;
+		rType = 0;
+		vrLen = 568;
 		vrLoc = 0;
 	};
 }

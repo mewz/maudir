@@ -42,7 +42,7 @@ strtolower(const char *inStr) /* IN */
 	for (i = 0; i < len; i++) {
 		outStr[i] = tolower(inStr[i]);
 	}
-	outStr[len + 1] = '\0';
+	outStr[len] = '\0';
 	return outStr;
 }
 
