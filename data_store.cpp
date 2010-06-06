@@ -65,15 +65,17 @@ const char* DataStore::short_url_from_url(const char *url){
 const char* DataStore::create_short_url_from_url(const char *url){
 	DataStore::init_services();
 	char *resset = (char*)DataStore::short_url_from_url(url);
+	char encoded[12] = { 0 };
 	if(resset == NULL){
 		try{
 			//insert into MySQL
 			Query query = conn.query();
 			query << "INSERT INTO url_1(url) values(" << mysqlpp::quote << url << ")";
 			SimpleResult res = query.execute();
-			resset = encode_base62(res.insert_id());
+			base62_encode_uint64(res.insert_id(), encoded, sizeof(encoded));
 			//insert into memcached
 			memcached_set(tcp_client, resset, strlen(resset), url, strlen(url), (time_t)0, (uint32_t)0);
+			resset = g_strdup(encoded);
 		}
 		catch(const BadOption& err){
 			std::cerr << err.what() << std::endl;
@@ -83,9 +85,11 @@ const char* DataStore::create_short_url_from_url(const char *url){
 		}
 	}
 	else{
-		return (const char*)encode_base62(atoll(resset));
+		base62_encode_uint64(atoll(resset), encoded, sizeof(encoded));
+		free(resset);
+		return g_strdup(encoded);
 	}
-		
+
 	return (const char*)resset;
 }
 
