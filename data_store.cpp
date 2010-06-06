@@ -65,14 +65,10 @@ char* DataStore::short_url_from_url(const char *url){
 char*
 DataStore::create_short_url_from_url (const char *url) /* IN */
 {
-	static gsize initialized = FALSE;
 	char *resset;
 	char encoded[12] = { 0 };
 
-	if (g_once_init_enter(&initialized)) {
-		DataStore::init_services();
-		g_once_init_leave(&initialized, TRUE);
-	}
+	DataStore::init_services();
 
 	if (!(resset = DataStore::short_url_from_url(url))) {
 		try {
@@ -105,19 +101,26 @@ DataStore::create_short_url_from_url (const char *url) /* IN */
 char*
 DataStore::memcached_url_from_key (const char* key) /* IN */
 {
-	DataStore::init_services();
 	memcached_return rc;
 	size_t string_len;
 	uint32_t flags;
-	return memcached_get(tcp_client, key, strlen(key), &string_len, &flags, &rc);
+
+	DataStore::init_services();
+
+	// Resulting string is NULL-terminated.
+	return memcached_get(tcp_client,
+	                     key, strlen(key) + 1,
+	                     &string_len,
+	                     &flags, &rc);
 }
 
 char*
 DataStore::mysql_url_from_key (const char* key) /* IN */
 {
-	DataStore::init_services();
 	char* url_redir = NULL;
 	guint64 store_id;
+
+	DataStore::init_services();
 
 	if (!base62_decode_uint64(key, &store_id)) {
 		return NULL;
@@ -125,23 +128,27 @@ DataStore::mysql_url_from_key (const char* key) /* IN */
 
 	Query query = conn.query();
 	query << "SELECT url from url_1 where id = " << store_id;
-	if(StoreQueryResult res = query.store()){
-		if(res.num_rows() > 0){
-			char *t_url = (char*)res[0][0].c_str();
-			url_redir = (char*)malloc(sizeof(char)*strlen(t_url)+1);
-			memset(url_redir, '\0', sizeof(char)*strlen(t_url)+1);
-			strncpy(url_redir, (const char*)t_url, sizeof(char)*strlen(t_url)+1);
-			//add to memcached
-			memcached_set(tcp_client, key, strlen(key), url_redir, strlen(url_redir), (time_t)0, (uint32_t)0);
+	if (StoreQueryResult res = query.store()) {
+		if (res.num_rows() > 0) {
+			// add to memcached, ensuring the NULL terminator in key and value.
+			url_redir = g_strdup(res[0][0].c_str());
+			memcached_set(tcp_client,
+			              key, strlen(key) + 1,
+			              url_redir, strlen(url_redir) + 1,
+			              (time_t)0, (uint32_t)0);
 		}
 	}
 	return url_redir;
 }
 
-char* DataStore::value_from_key(const char* key){
+char*
+DataStore::value_from_key (const char* key) /* IN */
+{
+	char *value;
+
 	DataStore::init_services();
-	char *value = DataStore::memcached_url_from_key(key);
-	if(value == NULL){
+
+	if (!(value = DataStore::memcached_url_from_key(key))) {
 		value = DataStore::mysql_url_from_key(key);
 	}
 	return value;
