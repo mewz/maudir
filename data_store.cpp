@@ -207,7 +207,7 @@ const char* DataStore::memcached_url_from_key(const char* key) /* IN */
 	memcached_return rc;
 	size_t string_len;
 	uint32_t flags;
-	return memcached_get(tcp_client, key, strlen(key), &string_len, &flags, &rc);
+	return memcached_get(tcp_client, key, strlen(key)+1, &string_len, &flags, &rc);
 }
 
 /*
@@ -239,7 +239,7 @@ const char* DataStore::mysql_url_from_key(const char* key) /* IN */
 			memset(url_redir, '\0', sizeof(char)*strlen(t_url)+1);
 			strncpy(url_redir, (const char*)t_url, sizeof(char)*strlen(t_url)+1);
 			//add to memcached
-			memcached_set(tcp_client, key, strlen(key), url_redir, strlen(url_redir), (time_t)0, (uint32_t)0);
+			memcached_set(tcp_client, key, strlen(key)+1, url_redir, strlen(url_redir)+1, (time_t)0, (uint32_t)0);
 		}
 	}
 	return (const char*)url_redir;
