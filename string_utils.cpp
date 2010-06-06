@@ -6,24 +6,79 @@
  *
  */
 
+#include <assert.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdlib.h>
+
 #include "string_utils.h"
 
-const char* strtolower(const char *cstr){
-	char *str = (char*)malloc(sizeof(char)*strlen(cstr)+1);
-	memset(str, '\0', sizeof(char)*strlen(cstr)+1);
-	for(size_t i = 0; i < strlen(cstr); i ++){
-		str[i] = tolower(cstr[i]);
+/*
+ *----------------------------------------------------------------------------
+ *
+ * strtolower --
+ *
+ *     Convert an ASCII string to its lowercase equivalent.  It is an error to
+ *     call this method with an UTF-8 or any non-ASCII string.
+ *
+ * Returns:
+ *      A newly allocated string which should be freed with free().
+ *
+ * Side effects:
+ *      None.
+ *
+ *----------------------------------------------------------------------------
+ */
+char*
+strtolower(const char *inStr) /* IN */
+{
+	char *outStr;
+	int i;
+	int len;
+
+	assert(inStr);
+
+	len = strlen(inStr);
+	outStr = (char *)malloc(sizeof(char) * (len + 1));
+	for (i = 0; i < len; i++) {
+		outStr[i] = tolower(inStr[i]);
 	}
-	return (const char*)str;
+	outStr[len + 1] = '\0';
+	return outStr;
 }
 
-void reverse_str(char *str){
-	char *res = (char*)malloc(sizeof(char)*strlen(str)+1);
-	memset(res, '\0', sizeof(char)*strlen(str)+1);
+/*
+ *----------------------------------------------------------------------------
+ *
+ * strreverse_inplace --
+ *
+ *     Reverses a string in place.  This method is not UTF-8 safe.  It is an
+ *     error to call it with anything than an ASCII encoded string.
+ *
+ * Returns:
+ *      None.
+ *
+ * Side effects:
+ *      None.
+ *
+ *----------------------------------------------------------------------------
+ */
+
+void
+strreverse_inplace (char *str) /* IN */
+{
+	char c;
+	int half;
+	int len;
 	int i;
-	int j;
-	for(i = strlen(str)-1, j = 0; i >= 0; i--, j++){
-		res[j] = str[i];
+
+	assert(str);
+
+	len = strlen(str);
+	half = len >> 1;
+	for (i = 0; i < half; i++) {
+		c = str[i];
+		str[i] = str[len - i - 1];
+		str[len - i - 1] = c;
 	}
-	strncpy(str, res, strlen(str));
 }

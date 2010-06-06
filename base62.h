@@ -8,14 +8,9 @@
 #ifndef __BASE_62_H_
 #define __BASE_62_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-#include <ctype.h>
-#include "string_utils.h"
-
-char* encode_base62(u_int64_t val);
-u_int64_t decode_base62(char *str);
+bool      base62_encode (u_int64_t   val, /* IN */
+                         char       *str, /* OUT */
+                         size_t      len); /* IN */
+u_int64_t base62_decode (const char *str); /* IN */
 
 #endif

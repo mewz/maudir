@@ -14,7 +14,10 @@
 #include <event2/http.h>
 #include <event2/http_compat.h>
 
-void print_to_client(struct evhttp_request *request, const char *response_str);
-void redirect_client(struct evhttp_request *request, const char *location);
+void	print_to_client(struct evhttp_request *request, /* IN */
+						const char *response_str); /* IN */
+
+void	redirect_client(struct evhttp_request *request, /* IN */ 
+						const char *location); /* IN */
 
 #endif

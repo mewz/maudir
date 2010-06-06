@@ -17,7 +17,13 @@
 #define DB_SERVER_INFO
 #define DB "urls"
 #define DBSERVER "localhost"
-#define DBUSER "someuser"
-#define DBPASSWORD "somepass"
+#define DBUSER "root"
+#define DBPASSWORD "pass1234"
 #define DBPORT 3006
+#endif
+
+#ifndef MEMCACHED_SERVER_INFO
+#define MEMCACHED_SERVER_INFO
+#define MEMCACHED_SERVER_HOST "127.0.0.1"
+#define MEMCACHED_SERVER_PORT 11211
 #endif
