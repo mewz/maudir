@@ -20,7 +20,7 @@
 
 class RedirectURL{
 public:
-	static void http_redirect_url_handler(struct evhttp_request *request, /* IN */
+	static void	http_redirect_url_handler(struct evhttp_request *request, /* IN */
 										  void *args); /* IN */
 };
 

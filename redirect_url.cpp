@@ -29,7 +29,8 @@ using namespace std;
  *
  *----------------------------------------------------------------------------
  */
-void RedirectURL::http_redirect_url_handler(struct evhttp_request *request, void *args){
+void 
+RedirectURL::http_redirect_url_handler(struct evhttp_request *request, void *args){
 	const char* req_uri = evhttp_request_uri(request);
 	req_uri++;
 	const char* url = DataStore::value_from_key(req_uri);

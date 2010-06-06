@@ -29,7 +29,8 @@ static Connection conn;
  *
  *----------------------------------------------------------------------------
  */
-void DataStore::init_memcached()
+void 
+DataStore::init_memcached()
 {
 	if(tcp_client == NULL){
 		tcp_client = memcached_create(NULL);
@@ -52,7 +53,8 @@ void DataStore::init_memcached()
  *
  *----------------------------------------------------------------------------
  */
-void DataStore::init_mysql()
+void 
+DataStore::init_mysql()
 {
 	if(!conn.connected()){
 		if(!conn.connect(DB, DBSERVER, DBUSER, DBPASSWORD, DBPORT)){
@@ -77,7 +79,8 @@ void DataStore::init_mysql()
  *
  *----------------------------------------------------------------------------
  */
-void DataStore::init_services()
+void 
+DataStore::init_services()
 {
 	DataStore::init_memcached();
 	DataStore::init_mysql();
@@ -99,7 +102,8 @@ void DataStore::init_services()
  *
  *----------------------------------------------------------------------------
  */
-const char* DataStore::url_id_from_url(const char *url) /* IN */
+const char* 
+DataStore::url_id_from_url(const char *url) /* IN */
 {
 	DataStore::init_services();
 	//must query MySQL - memcached only stores the shorturl=>url
@@ -152,10 +156,11 @@ const char* DataStore::url_id_from_url(const char *url) /* IN */
  *
  *----------------------------------------------------------------------------
  */
-const char* DataStore::create_short_url_from_url(const char *url) /* IN */
+const char* 
+DataStore::create_short_url_from_url(const char *url) /* IN */
 {
 	DataStore::init_services();
-	char *resset = (char*)DataStore::url_id_from_url(url);
+	const char *resset = DataStore::url_id_from_url(url);
 	if(resset == NULL){
 		try{
 			//insert into MySQL
@@ -182,8 +187,7 @@ const char* DataStore::create_short_url_from_url(const char *url) /* IN */
 		}
 		return NULL;
 	}
-		
-	return (const char*)resset;
+	return NULL;
 }
 
 /*
@@ -201,7 +205,8 @@ const char* DataStore::create_short_url_from_url(const char *url) /* IN */
  *
  *----------------------------------------------------------------------------
  */
-const char* DataStore::memcached_url_from_key(const char* key) /* IN */
+const char* 
+DataStore::memcached_url_from_key(const char* key) /* IN */
 {
 	DataStore::init_services();
 	memcached_return rc;
@@ -225,7 +230,8 @@ const char* DataStore::memcached_url_from_key(const char* key) /* IN */
  *
  *----------------------------------------------------------------------------
  */
-const char* DataStore::mysql_url_from_key(const char* key) /* IN */
+const char* 
+DataStore::mysql_url_from_key(const char* key) /* IN */
 {
 	DataStore::init_services();
 	char* url_redir = NULL;
@@ -261,7 +267,8 @@ const char* DataStore::mysql_url_from_key(const char* key) /* IN */
  *
  *----------------------------------------------------------------------------
  */
-const char* DataStore::value_from_key(const char* key) /* IN */
+const char* 
+DataStore::value_from_key(const char* key) /* IN */
 {
 	DataStore::init_services();
 	const char *value = DataStore::memcached_url_from_key(key);
