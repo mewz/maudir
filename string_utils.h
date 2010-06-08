@@ -8,7 +8,7 @@
 #ifndef __STRING_URTILS_H_
 #define __STRING_URTILS_H_
 
-char* strtolower         (const char *inStr);
+char* strtolower         (const char *str);
 void  strreverse_inplace (char       *str);
 
 #endif

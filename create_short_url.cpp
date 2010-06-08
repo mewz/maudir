@@ -38,17 +38,28 @@ CreateShortURL::parse_url(std::string urlin, /* IN */
 	HTLibInit("CreateShortURL", "1.0");
 	bool parsedOK = false;
 	if(HTURL_isAbsolute(urlin.c_str())){
-		const char* strtoparse = strtolower(urlin.c_str());
-		string scheme = HTParse(strtoparse, "", PARSE_ACCESS);
+		char* strtoparse = strtolower(urlin.c_str());
+
+		char *c_scheme = HTParse(strtoparse, "", PARSE_ACCESS);
+		string scheme(c_scheme);
+		HT_FREE(c_scheme);
+		
 		if(scheme == "http" || scheme == "https"){
-			string host = HTParse(strtoparse, "", PARSE_HOST);
+			char *c_host = HTParse(strtoparse, "", PARSE_HOST);
+			string host(c_host);
+			HT_FREE(c_host);
+			
 			if(CreateShortURL::is_valid_host(host)){
 				parsedOK = true;
-				string path = CreateShortURL::parse_path(HTParse(urlin.c_str(), "", PARSE_PATH));
+				char *c_path = HTParse(urlin.c_str(), "", PARSE_PATH);
+				string t_path(c_path);
+				HT_FREE(c_path);
+				
+				string path = CreateShortURL::parse_path(t_path);
 				parsedURL = scheme + "://" + host + "/" + path;
 			}
 		}
-		delete strtoparse;
+		free(strtoparse);
 	}
 	
 	HTLibTerminate();
@@ -109,8 +120,16 @@ CreateShortURL::parse_path(string pathin) /* IN */
 bool 
 CreateShortURL::is_valid_host(string host) /* IN */
 {
-	string server_host(strtolower(MAU_SERVER_NAME));
-	string host_lower(strtolower(host.c_str()));
+	char *cserver_host = strtolower(MAU_SERVER_NAME);
+	string server_host(cserver_host);
+	free(cserver_host);
+	//string server_host(strtolower(MAU_SERVER_NAME));
+	
+	char *chost_lower(strtolower(host.c_str()));
+	string host_lower(chost_lower);
+	free(chost_lower);
+	//string host_lower(strtolower(host.c_str()));
+
 	string localhost("localhost");
 	if(server_host == host_lower || host_lower == localhost){
 		return false;
@@ -159,11 +178,16 @@ CreateShortURL::http_create_url_handler(struct evhttp_request *request, /* IN */
 	bool noErr;
 	string url = CreateShortURL::parse_url(req_uri, &noErr);
 	if(noErr){
-		const char* url_id = DataStore::create_short_url_from_url(url.c_str());
+		char* turl = (char*)malloc(url.length()+1);
+		memset(turl, '\0', url.length()+1);
+		strncpy(turl, url.c_str(), url.length());
+		char *url_id = DataStore::create_short_url_from_url(turl);
+		free(turl);
 		string short_url = MAU_SERVER_URL;
 		if(url_id != NULL){
 			short_url += url_id;
 		}
+		delete url_id;
 		//string output = "<a href='" + short_url + "'>" + short_url + "</a>";
 		print_to_client(request, short_url.c_str());
 	}

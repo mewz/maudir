@@ -24,10 +24,10 @@ public:
 	static void		init_memcached(void);	
 	static void		init_mysql(void);
 	static void		init_services(void);
-	static const char*	url_id_from_url(const char *url); /* IN */
-	static const char*	create_short_url_from_url(const char *url); /* IN */
-	static const char*	memcached_url_from_key(const char *key); /* IN */
-	static const char*	value_from_key(const char *key); /* IN */
-	static const char*	mysql_url_from_key(const char *key); /* IN */
+	static char*	url_id_from_url(char *url); /* IN */
+	static char*	create_short_url_from_url(char *url); /* IN */
+	static char*	memcached_url_from_key(char *key); /* IN */
+	static char*	mysql_url_from_key(char *key); /* IN */
+	static char*	value_from_key(char *key); /* IN */
 };
 #endif
