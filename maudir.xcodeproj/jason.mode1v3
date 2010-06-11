@@ -273,7 +273,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
+									<integer>15</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -328,25 +328,25 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>9625256F11BF040C00F07528</string>
+										<string>963DBCED11C2E7FD00957E3C</string>
 										<key>history</key>
 										<array>
 											<string>968B0A2111B85FCE00B8F04F</string>
 											<string>968B0A2211B85FCE00B8F04F</string>
-											<string>96964A1C11BB734A00AF2270</string>
-											<string>96964A1D11BB734A00AF2270</string>
-											<string>96964A1F11BB734A00AF2270</string>
-											<string>96964A2111BB734A00AF2270</string>
-											<string>96964A3011BB76AF00AF2270</string>
-											<string>96964A3C11BB778600AF2270</string>
-											<string>96964A3D11BB778600AF2270</string>
-											<string>9625246611BEF3A300F07528</string>
-											<string>9625249611BEF62C00F07528</string>
-											<string>9625249711BEF62C00F07528</string>
-											<string>9625252311BEFE0200F07528</string>
-											<string>9625253311BF000200F07528</string>
-											<string>9625253411BF000200F07528</string>
-											<string>9625254C11BF025400F07528</string>
+											<string>960B37C511C013FD001F0B32</string>
+											<string>960B37CD11C015D2001F0B32</string>
+											<string>960B37CE11C015D2001F0B32</string>
+											<string>960B37CF11C015D2001F0B32</string>
+											<string>960B37D011C015D2001F0B32</string>
+											<string>960B37D111C015D2001F0B32</string>
+											<string>960B37D211C015D2001F0B32</string>
+											<string>960B37D311C015D2001F0B32</string>
+											<string>960B37D411C015D2001F0B32</string>
+											<string>960B37D511C015D2001F0B32</string>
+											<string>960B37D611C015D2001F0B32</string>
+											<string>960B37D711C015D2001F0B32</string>
+											<string>963DBCC211C2E40E00957E3C</string>
+											<string>963DBCC311C2E40E00957E3C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -404,9 +404,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>9625245111BEF1CB00F07528</string>
+				<string>963DBCAD11C2CA5000957E3C</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>9625245211BEF1CB00F07528</string>
+				<string>963DBCAE11C2CA5000957E3C</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -544,12 +544,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>9625246E11BEF3A300F07528</string>
-		<string>9625246F11BEF3A300F07528</string>
+		<string>963DBCB811C2CA5000957E3C</string>
+		<string>963DBCB911C2CA5000957E3C</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>968B03DD11B6DF0D00B8F04F</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/jason/projs/AppleProjects/maudir_git/maudir/maudir.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -569,14 +568,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>create_short_url.cpp</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -632,7 +629,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>968B03DD11B6DF0D00B8F04F</string>
-				<string>9625245411BEF1CB00F07528</string>
+				<string>963DBCAF11C2CA5000957E3C</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -676,8 +673,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 198}}</string>
-											<string>{{316, 0}, {378, 198}}</string>
+											<string>{{0, 0}, {316, 202}}</string>
+											<string>{{316, 0}, {378, 202}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -692,8 +689,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 198}}</string>
-											<string>{{0, 198}, {694, 183}}</string>
+											<string>{{0, 0}, {694, 202}}</string>
+											<string>{{0, 202}, {694, 179}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -726,7 +723,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 198}}</string>
+									<string>{{316, 0}, {378, 202}}</string>
 									<key>RubberWindowFrame</key>
 									<string>42 703 694 422 0 0 1920 1178 </string>
 								</dict>
@@ -754,13 +751,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>9625245811BEF1DB00F07528</string>
+				<string>963DBCB011C2CA5000957E3C</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>9625245911BEF1DB00F07528</string>
-				<string>9625245A11BEF1DB00F07528</string>
-				<string>9625245B11BEF1DB00F07528</string>
-				<string>9625245C11BEF1DB00F07528</string>
-				<string>9625245D11BEF1DB00F07528</string>
+				<string>963DBCB111C2CA5000957E3C</string>
+				<string>963DBCB211C2CA5000957E3C</string>
+				<string>963DBCB311C2CA5000957E3C</string>
+				<string>963DBCB411C2CA5000957E3C</string>
+				<string>963DBCB511C2CA5000957E3C</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -916,7 +913,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>9625245E11BEF1DB00F07528</string>
+				<string>963DBCB611C2CA5000957E3C</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

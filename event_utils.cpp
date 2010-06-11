@@ -38,7 +38,7 @@ void print_to_client(struct evhttp_request *request, /* IN */
  *
  * redirect_client --
  *
- *     302 redirects the http client to a new location
+ *     301 redirects the http client to a new location
  *
  * Returns:
  *     None.

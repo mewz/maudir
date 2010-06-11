@@ -209,6 +209,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
+					"-lglib-2.0",
 					"-lwwwxml",
 					"-lxmltok",
 					"-lxmlparse",
@@ -271,6 +272,7 @@
 					/opt/local/lib/,
 				);
 				OTHER_LDFLAGS = (
+					"-lglib-2.0",
 					"-lwwwxml",
 					"-lxmltok",
 					"-lxmlparse",

@@ -33,6 +33,7 @@ RedirectURL::http_redirect_url_handler(struct evhttp_request *request, void *arg
 	const char* req_uri = evhttp_request_uri(request);
 	req_uri++;
 	char* url = DataStore::value_from_key((char*)req_uri);
+	printf("url to redirect: %s\n", url);
 	if(url != NULL){
 		redirect_client(request, url);
 	}

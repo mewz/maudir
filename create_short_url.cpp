@@ -45,7 +45,7 @@ CreateShortURL::parse_url(std::string urlin, /* IN */
 		HT_FREE(c_scheme);
 		
 		if(scheme == "http" || scheme == "https"){
-			char *c_host = HTParse(strtoparse, "", PARSE_HOST);
+			char *c_host = HTUnEscape(HTParse(strtoparse, "", PARSE_HOST));
 			string host(c_host);
 			HT_FREE(c_host);
 			
@@ -123,26 +123,27 @@ CreateShortURL::is_valid_host(string host) /* IN */
 	char *cserver_host = strtolower(MAU_SERVER_NAME);
 	string server_host(cserver_host);
 	free(cserver_host);
-	//string server_host(strtolower(MAU_SERVER_NAME));
 	
 	char *chost_lower(strtolower(host.c_str()));
 	string host_lower(chost_lower);
 	free(chost_lower);
-	//string host_lower(strtolower(host.c_str()));
 
 	string localhost("localhost");
 	if(server_host == host_lower || host_lower == localhost){
 		return false;
 	}
-	//cheap way of parsing for a domain -
-	//we do not support IP addresses, so make sure the host contains at least one alpha
+	//cheap way of parsing for a domain - we do not support punycode or ip addresses
+	bool contains_alpha = false;
 	for(size_t i = 0; i < host.length(); i ++){
 		char c = host.at(i);
-		if(c > 57){
-			return true;
+		if((c > 64 && c < 91) || (c > 96 && c < 123)){
+			contains_alpha = true;
+		}
+		else if(!((c > 47 && c < 58) || (c > 64 && c < 91) || (c > 96 && c < 123) || c == 46)){
+			return false;
 		}
 	}
-	return false;
+	return contains_alpha;
 }
 
 
